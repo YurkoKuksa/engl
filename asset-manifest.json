@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.c358c071.js",
+    "main.js": "/engl/static/js/main.06b7c6b8.js",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
     "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
+    "static/media/forMobil.png": "/engl/static/media/forMobil.3884ea8c3f6b583be364.png",
+    "static/media/englTeach.png": "/engl/static/media/englTeach.9c7246ee0ce147ef9d03.png",
     "index.html": "/engl/index.html",
     "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.c358c071.js.map": "/engl/static/js/main.c358c071.js.map"
+    "main.06b7c6b8.js.map": "/engl/static/js/main.06b7c6b8.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.c358c071.js"
+    "static/js/main.06b7c6b8.js"
   ]
 }
