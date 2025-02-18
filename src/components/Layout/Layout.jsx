@@ -11,7 +11,6 @@ const Layout = () => {
         <Suspense>
           <Outlet />
         </Suspense>
-        <p>Layout</p>
       </LayoutContainer>
     </>
   );

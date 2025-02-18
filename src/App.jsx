@@ -8,7 +8,6 @@ import Contacts from "./pages/Contacts/Contacts";
 function App() {
   return (
     <>
-      <p>HUHUHUHUHUHUHU</p>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
