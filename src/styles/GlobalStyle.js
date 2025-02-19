@@ -62,3 +62,22 @@ body {
 
 
 `;
+
+// .monomakh-regular {
+//   font-family: "Monomakh", serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .pacifico-regular {
+//   font-family: "Pacifico", serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .caveat-<uniquifier> {
+//   font-family: "Caveat", serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
