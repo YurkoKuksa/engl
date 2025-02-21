@@ -38,6 +38,7 @@ import {
   SvgItm,
   LongSvg,
   ContactIcons,
+  AbsoluteBox,
 } from "./Home.Styled";
 
 AOS.init();
@@ -52,19 +53,21 @@ const Home = () => {
         alt="avatar"
       />
 
-      <AvatarMobile
-        data-aos="zoom-out-up"
-        data-aos-duration="1000"
-        src={AvatarMobil}
-        alt="avatar for mobile"
-      />
+      <AbsoluteBox>
+        <AvatarMobile
+          data-aos="zoom-out-up"
+          data-aos-duration="1000"
+          src={AvatarMobil}
+          alt="avatar for mobile"
+        />
 
-      <EnglTeachImg
-        data-aos="zoom-out-down"
-        data-aos-duration="3000"
-        src={EnglTeach}
-        alt="avatar for mobile"
-      />
+        <EnglTeachImg
+          data-aos="zoom-out-down"
+          data-aos-duration="3000"
+          src={EnglTeach}
+          alt="avatar for mobile"
+        />
+      </AbsoluteBox>
 
       <DownloadContainer>
         <h4>Download Resume</h4>
