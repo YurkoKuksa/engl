@@ -5,6 +5,8 @@ export const MainBox = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
+
+  /* outline: 1px dotted red; */
 `;
 
 export const Title = styled.h1`
@@ -19,6 +21,9 @@ export const Title = styled.h1`
   /* font-family: "Sarala", serif; */
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
+
+  /* outline: 1px dotted red; */
+
   @media screen and (min-width: 768px) {
     font-size: 103px;
     /* font-size: 80px; */
@@ -31,7 +36,9 @@ export const DownloadContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
+
+  /* outline: 1px dotted red; */
 
   @media screen and (min-width: 768px) {
     margin-bottom: 50px;
@@ -70,6 +77,8 @@ export const AvatarMobile = styled.img`
   height: auto;
   margin-bottom: 10px;
 
+  /* outline: 1px dotted red; */
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -80,25 +89,28 @@ export const EnglTeachImg = styled.img`
   margin-right: auto;
   display: block;
   margin-bottom: 10px;
+
+  /* outline: 1px dotted red; */
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 `;
 
 export const KahootSvg = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
 
   @media screen and (min-width: 768px) {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
 export const KahootBox = styled.div`
   background-color: rgb(84, 42, 146);
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
 
   display: flex;
   justify-content: center;
@@ -109,44 +121,45 @@ export const KahootBox = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    width: 27px;
-    height: 27px;
+    width: 45px;
+    height: 45px;
   }
 `;
 
 export const SvgItm = styled.img`
-  width: 22px;
-  height: 22px;
+  width: auto;
+  height: 28px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     transform: scale(1.1);
   }
 
   @media screen and (min-width: 768px) {
-    width: 27px;
-    height: 27px;
+    height: 45px;
   }
 `;
 
 export const LongSvg = styled.img`
   width: auto;
-  height: 22px;
+  height: 28px;
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     transform: scale(1.1);
   }
 
   @media screen and (min-width: 768px) {
-    width: auto;
-    height: 27px;
+    height: 45px;
   }
 `;
 
 export const ContactIcons = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: start;
+  gap: 25px;
 
+  /* outline: 1px dotted red; */
   @media screen and (min-width: 768px) {
     gap: 35px;
   }

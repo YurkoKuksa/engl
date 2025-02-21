@@ -5,7 +5,7 @@ import Avatar from "../../assets/img/engl-tch-3 - Copy.png";
 import AvatarMobil from "../../assets/img/forMobil.png";
 import EnglTeach from "../../assets/img/englTeach.png";
 import kahoot from "../../assets/svg/kahoot.svg";
-import youtube from "../../assets/svg/youtube.svg";
+import youtube from "../../assets/svg/youtube1.svg";
 import telegram from "../../assets/svg/telegram.svg";
 import discord from "../../assets/svg/discord.svg";
 // import linkedIn from "../../assets/svg/linkedin.svg";
@@ -16,7 +16,7 @@ import discord from "../../assets/svg/discord.svg";
 // import monday from "../../assets/svg/monday.svg";
 // import wakelet from "../../assets/svg/wakelet.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
-import mail from "../../assets/svg/mail.svg";
+import mail from "../../assets/svg/email.svg";
 // import email from "../../assets/svg/email.svg";
 // import phone from "../../assets/svg/phone.svg";
 import phone1 from "../../assets/svg/phone1.svg";
@@ -105,7 +105,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SvgItm src={youtube} alt="youtube" />
+            <LongSvg src={youtube} alt="youtube" />
           </a>
         </li>
         <li>
@@ -132,7 +132,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LongSvg src={whatsapp} alt="whatsapp" />
+            <SvgItm src={whatsapp} alt="whatsapp" />
           </a>
         </li>
         <li>
@@ -146,7 +146,7 @@ const Home = () => {
         </li>
         <li>
           <a href="tel:+31616319115" target="_blank" rel="noopener noreferrer">
-            <LongSvg src={phone1} alt="phone1" />
+            <SvgItm src={phone1} alt="phone1" />
           </a>
         </li>
       </ContactIcons>
