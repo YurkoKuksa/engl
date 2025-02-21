@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.d62038ef.js",
+    "main.js": "/engl/static/js/main.b339164a.js",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
     "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
     "static/media/forMobil.png": "/engl/static/media/forMobil.3884ea8c3f6b583be364.png",
@@ -16,10 +16,10 @@
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
     "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.d62038ef.js.map": "/engl/static/js/main.d62038ef.js.map"
+    "main.b339164a.js.map": "/engl/static/js/main.b339164a.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.d62038ef.js"
+    "static/js/main.b339164a.js"
   ]
 }
