@@ -6,6 +6,12 @@ export const MainBox = styled.div`
   margin-right: auto;
   padding-top: 15px;
 
+  /* position: relative; */
+  height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
   /* outline: 1px dotted red; */
 `;
 
@@ -20,9 +26,10 @@ export const Title = styled.h1`
   /* font-family: "Radley", serif; */
   /* font-family: "Sarala", serif; */
   font-family: "Vollkorn", serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
 
   /* outline: 1px dotted red; */
+  margin-bottom: auto;
 
   @media screen and (min-width: 768px) {
     font-size: 103px;
@@ -36,7 +43,7 @@ export const DownloadContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 
   /* outline: 1px dotted red; */
 
@@ -75,7 +82,12 @@ export const AvatarMobile = styled.img`
   width: 100%;
   max-width: 768px;
   height: auto;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto; */
+  position: absolute;
+  top: 90px;
+  left: 0;
 
   /* outline: 1px dotted red; */
 
@@ -85,10 +97,16 @@ export const AvatarMobile = styled.img`
 `;
 
 export const EnglTeachImg = styled.img`
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%;
+  max-width: 768px;
+  height: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: block;
   margin-bottom: 10px;
+  position: absolute;
+  top: 72%;
+  left: auto;
 
   /* outline: 1px dotted red; */
 
@@ -158,6 +176,7 @@ export const ContactIcons = styled.ul`
   justify-content: center;
   align-items: start;
   gap: 25px;
+  margin-bottom: 5px;
 
   /* outline: 1px dotted red; */
   @media screen and (min-width: 768px) {
