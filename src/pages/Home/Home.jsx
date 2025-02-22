@@ -16,7 +16,7 @@ import discord from "../../assets/svg/discord.svg";
 // import monday from "../../assets/svg/monday.svg";
 // import wakelet from "../../assets/svg/wakelet.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
-import mail from "../../assets/svg/email.svg";
+import mail from "../../assets/svg/gmail.svg";
 // import email from "../../assets/svg/email.svg";
 // import phone from "../../assets/svg/phone.svg";
 import phone1 from "../../assets/svg/phone1.svg";

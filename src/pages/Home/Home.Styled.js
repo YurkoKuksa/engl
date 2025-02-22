@@ -183,7 +183,7 @@ export const ContactIcons = styled.ul`
   justify-content: center;
   align-items: start;
   gap: 25px;
-  margin-bottom: 18px;
+  margin-bottom: 46px;
 
   /* outline: 1px dotted red; */
   @media screen and (min-width: 768px) {
