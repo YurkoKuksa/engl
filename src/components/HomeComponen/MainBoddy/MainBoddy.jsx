@@ -59,10 +59,10 @@ const MainBoddy = () => {
           />
           <TextBox data-aos="zoom-out-down" data-aos-duration="3000">
             <DescrText>
-              " Gaining valuable experience teaching English to Chinese students
-              at Better English School in Beijing, China. Creating a fully
-              immersive English-speaking environment to enhance language
-              acquisition and communication skills."
+              " Teaching English to Chinese students at Better English School in
+              Beijing, China. Creating a fully immersive English-speaking
+              environment to enhance language acquisition and communication
+              skills."
             </DescrText>
           </TextBox>
         </ListItem>
