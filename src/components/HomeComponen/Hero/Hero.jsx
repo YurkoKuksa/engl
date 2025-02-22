@@ -30,6 +30,7 @@ import {
   ContactIcons,
   AbsoluteBox,
   DownlResume,
+  Stad,
 } from "./Home.Styled";
 
 AOS.init();
@@ -144,6 +145,7 @@ const Hero = () => {
           </a>
         </li>
       </ContactIcons>
+      <Stad>Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands</Stad>
     </MainBox>
   );
 };

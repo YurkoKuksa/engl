@@ -191,10 +191,18 @@ export const ContactIcons = styled.ul`
   justify-content: center;
   align-items: start;
   gap: 25px;
-  margin-bottom: 68px;
+  margin-bottom: 28px;
 
   /* outline: 1px dotted red; */
   @media screen and (min-width: 768px) {
     gap: 35px;
+  }
+`;
+
+export const Stad = styled.p`
+  text-align: center;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 `;

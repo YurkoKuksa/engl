@@ -5,7 +5,7 @@ export const MainBox = styled.div`
 `;
 
 export const ListItem = styled.li`
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `;
 
 export const PictureOne = styled.img`
@@ -38,6 +38,18 @@ export const DescrText = styled.p`
   /* font-family: "Radley", serif; */
   /* font-family: "Vollkorn", serif; */
 
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    max-width: 632px;
+    width: 100%;
+  }
+`;
+
+export const TextBox = styled.div`
+  max-width: 632px;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (min-width: 768px) {
     font-size: 20px;
     max-width: 632px;
