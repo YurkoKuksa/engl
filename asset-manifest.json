@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.73699c62.js",
+    "main.js": "/engl/static/js/main.5906e140.js",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
     "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
     "static/media/forMobil.png": "/engl/static/media/forMobil.3884ea8c3f6b583be364.png",
     "static/media/englTeach.png": "/engl/static/media/englTeach.9c7246ee0ce147ef9d03.png",
     "static/media/youtube1.svg": "/engl/static/media/youtube1.b56534fdaee45d28decb14992e8f23e3.svg",
+    "static/media/gmail.svg": "/engl/static/media/gmail.bfabb7a624e20946dd016914246a27b2.svg",
     "index.html": "/engl/index.html",
     "static/media/phone1.svg": "/engl/static/media/phone1.d90d9cc4adad67f78dabb81cfb75320e.svg",
     "static/media/whatsapp.svg": "/engl/static/media/whatsapp.f2c82ada308cf1c6df2b5e7c779d5d46.svg",
     "static/media/telegram.svg": "/engl/static/media/telegram.399dc03a668798461237e0ddc6ae0fa4.svg",
     "static/media/discord.svg": "/engl/static/media/discord.becb6da9c8e961876a5f19aaae3f07a3.svg",
-    "static/media/email.svg": "/engl/static/media/email.5a1fc5e42c92f48e37eaf0799a17f800.svg",
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
     "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.73699c62.js.map": "/engl/static/js/main.73699c62.js.map"
+    "main.5906e140.js.map": "/engl/static/js/main.5906e140.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.73699c62.js"
+    "static/js/main.5906e140.js"
   ]
 }
