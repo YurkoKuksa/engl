@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.05e8f013.js",
+    "main.js": "/engl/static/js/main.2fd382a4.js",
+    "static/media/2.png": "/engl/static/media/2.c8eebeff5a8f8045750f.png",
+    "static/media/4.jpg": "/engl/static/media/4.b4526b239a55bddce6c9.jpg",
     "static/media/journaal.jpg": "/engl/static/media/journaal.5fe559b703e3afddc7b1.jpg",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
     "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
@@ -17,10 +19,10 @@
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
     "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.05e8f013.js.map": "/engl/static/js/main.05e8f013.js.map"
+    "main.2fd382a4.js.map": "/engl/static/js/main.2fd382a4.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.05e8f013.js"
+    "static/js/main.2fd382a4.js"
   ]
 }
