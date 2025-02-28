@@ -7,7 +7,7 @@ import EnglTeach from "../../../assets/img/englTeach.png";
 import kahoot from "../../../assets/svg/kahoot.svg";
 import youtube from "../../../assets/svg/youtube1.svg";
 import telegram from "../../../assets/svg/telegram.svg";
-import discord from "../../../assets/svg/discord.svg";
+import linkedIn from "../../../assets/svg/linkedin.svg";
 import whatsapp from "../../../assets/svg/whatsapp.svg";
 import mail from "../../../assets/svg/gmail.svg";
 import phone1 from "../../../assets/svg/phone1.svg";
@@ -31,12 +31,15 @@ import {
   AbsoluteBox,
   DownlResume,
   Stad,
+  ScrollSpot,
 } from "./Home.Styled";
 
 AOS.init();
 const Hero = () => {
   return (
     <MainBox>
+      <ScrollSpot id="scroll-section"> </ScrollSpot>
+
       <Title>Yurii Kuksa</Title>
       <AvatarDeskTop
         data-aos="zoom-out"
@@ -72,7 +75,7 @@ const Hero = () => {
         </DownLoading>
       </DownloadContainer>
 
-      {/* <SvgItm src={linkedIn} alt="linked In" /> */}
+      {/* <SvgItm src={discord} alt="discord" /> */}
       {/* <SvgItm src={quizlet} alt="quizlet" />
       <LongSvg src={Moodle} alt="Moodle" />
       <SvgItm src={instagram} alt="instagram" />
@@ -103,22 +106,14 @@ const Hero = () => {
             <LongSvg src={youtube} alt="youtube" />
           </a>
         </li>
+
         <li>
           <a
-            href="https://t.me/esl_tutoring"
+            href="https://www.linkedin.com/in/yurii-kuksa/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SvgItm src={telegram} alt="telegram" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://discord.gg/53yD4zUf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SvgItm src={discord} alt="discord" />
+            <SvgItm src={linkedIn} alt="linkedIn" />
           </a>
         </li>
         <li>
@@ -128,6 +123,15 @@ const Hero = () => {
             rel="noopener noreferrer"
           >
             <SvgItm src={whatsapp} alt="whatsapp" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://t.me/esl_tutoring"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgItm src={telegram} alt="telegram" />
           </a>
         </li>
         <li>

@@ -206,3 +206,19 @@ export const Stad = styled.p`
     font-size: 20px;
   }
 `;
+
+export const ScrollSpot = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 50%;
+
+  transform: translateX(50%);
+
+  @media screen and (min-width: 768px) {
+    top: 105px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 100px;
+  }
+`;
