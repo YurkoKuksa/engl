@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.bf9045bb.js",
+    "main.js": "/engl/static/js/main.7eb68ea8.js",
     "static/media/2.png": "/engl/static/media/2.c8eebeff5a8f8045750f.png",
     "static/media/4.jpg": "/engl/static/media/4.b4526b239a55bddce6c9.jpg",
     "static/media/journaal.jpg": "/engl/static/media/journaal.5fe559b703e3afddc7b1.jpg",
@@ -15,14 +15,15 @@
     "static/media/phone1.svg": "/engl/static/media/phone1.d90d9cc4adad67f78dabb81cfb75320e.svg",
     "static/media/whatsapp.svg": "/engl/static/media/whatsapp.f2c82ada308cf1c6df2b5e7c779d5d46.svg",
     "static/media/telegram.svg": "/engl/static/media/telegram.399dc03a668798461237e0ddc6ae0fa4.svg",
-    "static/media/discord.svg": "/engl/static/media/discord.becb6da9c8e961876a5f19aaae3f07a3.svg",
+    "static/media/linkedin.svg": "/engl/static/media/linkedin.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
     "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
+    "static/media/double_arrow_up.svg": "/engl/static/media/double_arrow_up.b5d00926162fa68a1db33ef1a5bd0806.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.bf9045bb.js.map": "/engl/static/js/main.bf9045bb.js.map"
+    "main.7eb68ea8.js.map": "/engl/static/js/main.7eb68ea8.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.bf9045bb.js"
+    "static/js/main.7eb68ea8.js"
   ]
 }
