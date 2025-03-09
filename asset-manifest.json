@@ -1,12 +1,18 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4b18bbd0.css",
-    "main.js": "/engl/static/js/main.7eb68ea8.js",
+    "main.js": "/engl/static/js/main.0f38df08.js",
+    "static/media/dacapo1.jpg": "/engl/static/media/dacapo1.5872a67db290e8fbe120.jpg",
     "static/media/2.png": "/engl/static/media/2.c8eebeff5a8f8045750f.png",
     "static/media/4.jpg": "/engl/static/media/4.b4526b239a55bddce6c9.jpg",
+    "static/media/groenwald.jpg": "/engl/static/media/groenwald.3fd2edf44edecfcad5b9.jpg",
+    "static/media/sintJan1.jpg": "/engl/static/media/sintJan1.e98fd31bfc3380b8ead0.jpg",
     "static/media/journaal.jpg": "/engl/static/media/journaal.5fe559b703e3afddc7b1.jpg",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
+    "static/media/back.webp": "/engl/static/media/back.bdd111a8681324aa1099.webp",
+    "static/media/1.jpg": "/engl/static/media/1.731ff6f81b00e0e657b3.jpg",
     "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
+    "static/media/sinJan2.jpg": "/engl/static/media/sinJan2.b3c95ea672ae4b708f5b.jpg",
     "static/media/forMobil.png": "/engl/static/media/forMobil.3884ea8c3f6b583be364.png",
     "static/media/englTeach.png": "/engl/static/media/englTeach.9c7246ee0ce147ef9d03.png",
     "static/media/youtube1.svg": "/engl/static/media/youtube1.b56534fdaee45d28decb14992e8f23e3.svg",
@@ -17,13 +23,13 @@
     "static/media/telegram.svg": "/engl/static/media/telegram.399dc03a668798461237e0ddc6ae0fa4.svg",
     "static/media/linkedin.svg": "/engl/static/media/linkedin.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
-    "static/media/download.svg": "/engl/static/media/download.720b716339f414e87f1584ecf2ac9b6e.svg",
+    "static/media/download.svg": "/engl/static/media/download.63fc05589cda0aa27aacbb88df8071aa.svg",
     "static/media/double_arrow_up.svg": "/engl/static/media/double_arrow_up.b5d00926162fa68a1db33ef1a5bd0806.svg",
     "main.4b18bbd0.css.map": "/engl/static/css/main.4b18bbd0.css.map",
-    "main.7eb68ea8.js.map": "/engl/static/js/main.7eb68ea8.js.map"
+    "main.0f38df08.js.map": "/engl/static/js/main.0f38df08.js.map"
   },
   "entrypoints": [
     "static/css/main.4b18bbd0.css",
-    "static/js/main.7eb68ea8.js"
+    "static/js/main.0f38df08.js"
   ]
 }
