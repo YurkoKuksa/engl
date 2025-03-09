@@ -56,3 +56,8 @@ export const TextBox = styled.div`
     width: 100%;
   }
 `;
+
+export const LinkS = styled.a`
+  color: #000099;
+  text-decoration: underline;
+`;

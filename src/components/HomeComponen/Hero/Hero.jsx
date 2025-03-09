@@ -32,6 +32,7 @@ import {
   DownlResume,
   Stad,
   ScrollSpot,
+  LinkSittard,
 } from "./Home.Styled";
 
 AOS.init();
@@ -149,7 +150,16 @@ const Hero = () => {
           </a>
         </li>
       </ContactIcons>
-      <Stad>Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands</Stad>
+      <Stad>
+        {" "}
+        <LinkSittard
+          href="https://maps.app.goo.gl/h4mE4AAsnyuUmMsn7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands
+        </LinkSittard>
+      </Stad>
     </MainBox>
   );
 };

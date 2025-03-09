@@ -69,6 +69,9 @@ export const DownloadFile = styled.img`
 
   &:hover {
     transform: scale(1.1);
+    /* filter: invert(29%) sepia(99%) saturate(6170%) hue-rotate(240deg); */
+    filter: invert(7%) sepia(100%) saturate(4527%) hue-rotate(244deg)
+      brightness(131%) contrast(152%);
   }
 
   @media screen and (min-width: 768px) {
@@ -220,5 +223,15 @@ export const ScrollSpot = styled.div`
 
   @media screen and (min-width: 1200px) {
     top: 100px;
+  }
+`;
+
+export const LinkSittard = styled.a`
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: blue;
+    font-weight: 500;
   }
 `;
