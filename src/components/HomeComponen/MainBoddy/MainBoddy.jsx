@@ -17,8 +17,10 @@ import sintJan2 from "../../../assets/img/sinJan2.jpg";
 import groenwald from "../../../assets/img/groenwald.jpg";
 import dacapo from "../../../assets/img/dacapo1.jpg";
 import picA from "../../../assets/img/4.jpg";
+import picAA from "../../../assets/img/say1.jpg";
 import picB from "../../../assets/img/2.png";
 import picC from "../../../assets/img/1.jpg";
+import china from "../../../assets/img/china.jpg";
 
 AOS.init();
 const MainBoddy = () => {
@@ -167,6 +169,31 @@ const MainBoddy = () => {
           </TextBox>
         </ListItem>
 
+        {/* picture 5 */}
+
+        <ListItem>
+          <PictureOne
+            src={picAA}
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            alt="Berdychiv school"
+          />
+          <TextBox data-aos="zoom-out-down" data-aos-duration="3000">
+            <DescrText>
+              Passionate ESL instructor at &nbsp;
+              <LinkS
+                href="https://www.instagram.com/karina_shyshmintseva?igsh=bDJhNGE5b2h4bWNt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Say Private School
+              </LinkS>
+              &nbsp; in Berdychiv, Ukraine, helping students build confidence
+              and fluency in English.
+            </DescrText>
+          </TextBox>
+        </ListItem>
+
         {/* picture 6  */}
 
         <ListItem>
@@ -197,6 +224,23 @@ const MainBoddy = () => {
           />
           <TextBox data-aos="zoom-out-down" data-aos-duration="3000">
             <DescrText>Better English School in Beijing, China </DescrText>
+          </TextBox>
+        </ListItem>
+
+        {/* picture 7  */}
+
+        <ListItem>
+          <PictureOne
+            src={china}
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            alt="China school"
+          />
+          <TextBox data-aos="zoom-out-down" data-aos-duration="3000">
+            <DescrText>
+              Completed an advanced ESL teacher training course with Better
+              Education in China!
+            </DescrText>
           </TextBox>
         </ListItem>
       </ul>
