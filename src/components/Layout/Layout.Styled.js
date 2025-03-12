@@ -16,7 +16,7 @@ export const LayoutContainer = styled.div`
       rgba(193, 194, 206, 0.7)
     ),
     url(${back});
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 `;

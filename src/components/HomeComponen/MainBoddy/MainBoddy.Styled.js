@@ -59,5 +59,15 @@ export const TextBox = styled.div`
 
 export const LinkS = styled.a`
   color: #000099;
-  text-decoration: underline;
+  display: inline-block;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.03);
+    color: rgb(0, 0, 103);
+    text-decoration: underline;
+  }
 `;
