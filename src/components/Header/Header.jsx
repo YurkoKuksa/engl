@@ -1,11 +1,7 @@
-import HeroAnimation from "../../components/HeroAnimation/HeroAnimation";
+// import HeroAnimation from "../../components/HeroAnimation/HeroAnimation";
 
 const Header = () => {
-  return (
-    <div style={{ position: "relative" }}>
-      <HeroAnimation />
-    </div>
-  );
+  return <div style={{ position: "relative" }}>{/* <HeroAnimation /> */}</div>;
 };
 
 export default Header;

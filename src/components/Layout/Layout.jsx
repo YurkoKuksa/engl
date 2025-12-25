@@ -24,7 +24,7 @@ const Layout = () => {
     // },
   };
 
-  const backgroundType = "englCoffee";
+  const backgroundType = "blueSnow";
   const { Component: BackgroundComponent, theme } = backgrounds[backgroundType];
   return (
     <>

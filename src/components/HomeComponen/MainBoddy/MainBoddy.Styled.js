@@ -94,5 +94,5 @@ export const LinkS = styled.a`
     text-decoration: underline;
   }
 
-  ${({ theme }) => linkTheme[theme?.mode || "dark"]}
+  ${({ theme }) => linkTheme[theme?.mode || "light"]}
 `;

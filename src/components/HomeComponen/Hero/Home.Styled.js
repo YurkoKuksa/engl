@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const MainBox = styled.div`
   margin-left: auto;
@@ -53,7 +53,17 @@ export const DownloadFile = styled.img`
   width: 16px;
   height: 16px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  ${({ $theme }) =>
+    $theme === "dark"
+      ? css`
+          filter: brightness(0) invert(1);
+        `
+      : css`
+          filter: brightness(0) invert(0);
+        `}
 
   &:hover {
     transform: scale(1.1);

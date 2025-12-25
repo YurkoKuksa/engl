@@ -37,7 +37,7 @@ import {
 } from "./Home.Styled";
 
 AOS.init();
-const Hero = () => {
+const Hero = ({ theme }) => {
   return (
     <MainBox style={{ position: "relative" }}>
       <ScrollSpot id="scroll-section"> </ScrollSpot>
@@ -74,7 +74,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <DownloadFile src={download} alt="завантажити" />
+          <DownloadFile src={download} alt="завантажити" $theme={theme} />
         </DownLoading>
       </DownloadContainer>
 

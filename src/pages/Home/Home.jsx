@@ -1,6 +1,6 @@
-import { useOutletContext } from "react-router-dom";
 import Hero from "../../components/HomeComponen/Hero/Hero";
 import MainBoddy from "../../components/HomeComponen/MainBoddy/MainBoddy";
+import { useOutletContext } from "react-router-dom";
 // import HeroAnimation from "../../components/HeroAnimation/HeroAnimation";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div style={{ position: "relative" }}>
       {/* <HeroAnimation /> */}
-      <Hero />
+      <Hero theme={theme} />
       <MainBoddy theme={theme} />
     </div>
   );
