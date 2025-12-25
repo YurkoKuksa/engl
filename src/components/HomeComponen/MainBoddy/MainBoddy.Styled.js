@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const MainBox = styled.div`
   padding: 20px 20px 150px;
@@ -38,6 +38,12 @@ export const DescrText = styled.p`
   /* font-family: "Radley", serif; */
   /* font-family: "Vollkorn", serif; */
 
+  ${({ theme }) =>
+    theme?.mode === "dark" &&
+    css`
+      color: #ced6deff;
+    `}
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
     max-width: 632px;
@@ -57,8 +63,25 @@ export const TextBox = styled.div`
   }
 `;
 
+export const linkTheme = {
+  light: css`
+    color: #000099;
+
+    &:hover {
+      color: rgb(0, 0, 103);
+    }
+  `,
+  dark: css`
+    color: #27415aff;
+
+    &:hover {
+      color: #a3b3c2;
+    }
+  `,
+};
+
 export const LinkS = styled.a`
-  color: #000099;
+  /* color: #000099; */
   display: inline-block;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -67,7 +90,9 @@ export const LinkS = styled.a`
 
   &:hover {
     transform: scale(1.03);
-    color: rgb(0, 0, 103);
+    /* color: rgb(0, 0, 103); */
     text-decoration: underline;
   }
+
+  ${({ theme }) => linkTheme[theme?.mode || "dark"]}
 `;

@@ -22,11 +22,14 @@ import picB from "../../../assets/img/2.png";
 import picC from "../../../assets/img/1.jpg";
 import china from "../../../assets/img/china.jpg";
 
+import { ThemeProvider } from "styled-components";
+
 AOS.init();
-const MainBoddy = () => {
+const MainBoddy = ({ theme }) => {
   return (
-    <MainBox>
-      <ul>
+    <ThemeProvider theme={{ mode: theme }}>
+      <MainBox>
+        <ul>
         {/* picture 1  */}
 
         <ListItem>
@@ -244,7 +247,8 @@ const MainBoddy = () => {
           </TextBox>
         </ListItem>
       </ul>
-    </MainBox>
+      </MainBox>
+    </ThemeProvider>
   );
 };
 

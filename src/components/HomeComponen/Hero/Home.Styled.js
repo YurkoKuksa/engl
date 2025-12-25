@@ -1,39 +1,27 @@
 import styled from "styled-components";
 
 export const MainBox = styled.div`
-  max-width: 635px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
-
   position: relative;
   height: 100vh;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-
-  /* outline: 1px dotted red; */
 `;
 
 export const Title = styled.h1`
-  /* color: #6b6363; */
   color: rgb(199, 198, 198);
   font-size: 63px;
   text-align: center;
-  /* font-family: "DM Serif Text", serif; */
   font-weight: 700;
-  /* font-family: "Merriweather", serif; */
-  /* font-family: "Radley", serif; */
-  /* font-family: "Sarala", serif; */
   font-family: "Vollkorn", serif;
-  /* font-optical-sizing: auto; */
 
-  /* outline: 1px dotted red; */
   margin-bottom: auto;
 
   @media screen and (min-width: 768px) {
     font-size: 103px;
-    /* font-size: 80px; */
     line-height: 1;
     margin-bottom: 0;
   }
@@ -69,7 +57,6 @@ export const DownloadFile = styled.img`
 
   &:hover {
     transform: scale(1.1);
-    /* filter: invert(29%) sepia(99%) saturate(6170%) hue-rotate(240deg); */
     filter: invert(7%) sepia(100%) saturate(4527%) hue-rotate(244deg)
       brightness(131%) contrast(152%);
   }
@@ -86,6 +73,9 @@ export const AvatarDeskTop = styled.img`
     display: block;
     margin-bottom: 30px;
     margin-bottom: auto;
+    max-width: 635px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -96,11 +86,9 @@ export const AvatarMobile = styled.img`
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* position: absolute;
-  top: 90px;
-  left: 0; */
+  display: block;
 
-  /* outline: 1px dotted red; */
+  /* outline: 1px dotted red;  */
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -114,13 +102,6 @@ export const EnglTeachImg = styled.img`
   margin-left: auto;
   margin-right: auto;
   display: block;
-  /* margin-bottom: 10px; */
-  /* position: absolute;
-  top: 71%;
-  left: auto;
-  right: auto; */
-
-  /* outline: 1px dotted red; */
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -131,6 +112,12 @@ export const AbsoluteBox = styled.div`
   position: absolute;
   top: 90px;
   left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const KahootSvg = styled.img`

@@ -13,6 +13,7 @@ import mail from "../../../assets/svg/gmail.svg";
 import phone1 from "../../../assets/svg/phone1.svg";
 import resume_pdf from "../../../assets/pdf/ESL-teacher-2025.pdf";
 import download from "../../../assets/svg/download.svg";
+// import HeroAnimation from "../../../components/HeroAnimation/TeacherHeroAnimation";
 
 import {
   AvatarDeskTop,
@@ -38,8 +39,9 @@ import {
 AOS.init();
 const Hero = () => {
   return (
-    <MainBox>
+    <MainBox style={{ position: "relative" }}>
       <ScrollSpot id="scroll-section"> </ScrollSpot>
+      {/* <HeroAnimation /> */}
 
       <Title>Yurii Kuksa</Title>
       <AvatarDeskTop
@@ -75,16 +77,6 @@ const Hero = () => {
           <DownloadFile src={download} alt="завантажити" />
         </DownLoading>
       </DownloadContainer>
-
-      {/* <SvgItm src={discord} alt="discord" /> */}
-      {/* <SvgItm src={quizlet} alt="quizlet" />
-      <LongSvg src={Moodle} alt="Moodle" />
-      <SvgItm src={instagram} alt="instagram" />
-      <SvgItm src={padlet} alt="padlet" />
-      <SvgItm src={monday} alt="monday" />
-      <LongSvg src={wakelet} alt="wakelet" /> */}
-      {/* <LongSvg src={email} alt="email" /> */}
-      {/* <LongSvg src={phone} alt="phone" /> */}
 
       <ContactIcons>
         <li>
@@ -151,7 +143,6 @@ const Hero = () => {
         </li>
       </ContactIcons>
       <Stad>
-        {" "}
         <LinkSittard
           href="https://maps.app.goo.gl/h4mE4AAsnyuUmMsn7"
           target="_blank"
@@ -165,3 +156,13 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// {/* <SvgItm src={discord} alt="discord" /> */}
+// {/* <SvgItm src={quizlet} alt="quizlet" />
+// <LongSvg src={Moodle} alt="Moodle" />
+// <SvgItm src={instagram} alt="instagram" />
+// <SvgItm src={padlet} alt="padlet" />
+// <SvgItm src={monday} alt="monday" />
+// <LongSvg src={wakelet} alt="wakelet" /> */}
+// {/* <LongSvg src={email} alt="email" /> */}
+// {/* <LongSvg src={phone} alt="phone" /> */}
