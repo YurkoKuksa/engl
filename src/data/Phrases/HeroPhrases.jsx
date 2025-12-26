@@ -20,6 +20,7 @@ const phrases = [
   "Ready to level up your language skills?",
   "Every day is a good day to learn.",
   "Knowledge grows with practice.",
+  "The limits of my language mean the limits of my world.— Ludwig Wittgenstein",
 ];
 
 export default phrases;

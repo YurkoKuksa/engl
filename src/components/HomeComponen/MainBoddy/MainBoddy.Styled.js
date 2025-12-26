@@ -72,7 +72,7 @@ export const linkTheme = {
     }
   `,
   dark: css`
-    color: #27415aff;
+    color: #647789ff;
 
     &:hover {
       color: #a3b3c2;

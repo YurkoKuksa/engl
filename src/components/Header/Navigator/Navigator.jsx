@@ -1,5 +1,7 @@
+import NavigationMenu from "../../NavigationMenu/NavigationMenu";
+
 const Navigator = () => {
-  return <div>Navigator</div>;
+  return <NavigationMenu />;
 };
 
 export default Navigator;

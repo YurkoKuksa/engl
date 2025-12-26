@@ -3,34 +3,38 @@ import { Link } from "react-router-dom";
 
 export const NavigationMenuContainer = styled.nav`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
 `;
 
 export const NavList = styled.ul`
   display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 20px;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 15px;
-  }
+  width: 100%;
 `;
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-  color: inherit;
-  font-size: 18px;
+  /* color: #ced6de; */
+  color: #574129;
+  font-size: 20px;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 12px 16px;
   border-radius: 4px;
+  display: block;
+  width: 100%;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateX(-5px);
     text-decoration: underline;
+    /* color: #ffffff; */
+    color: #231a10;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   ${({ $isActive }) =>
@@ -38,9 +42,12 @@ export const NavLink = styled(Link)`
     css`
       font-weight: 700;
       text-decoration: underline;
+      /* color: #ffffff; */
+      color: #231a10;
+      background-color: rgba(255, 255, 255, 0.15);
     `}
 
   @media screen and (min-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 `;

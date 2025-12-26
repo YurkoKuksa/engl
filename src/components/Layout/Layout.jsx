@@ -29,7 +29,7 @@ const Layout = () => {
   return (
     <>
       <BackgroundComponent>
-        <Header />
+        <Header theme={theme} />
         <TextStyle $theme={theme}>
           <Suspense fallback={<div>Loading...</div>}>
             <Outlet context={{ theme }} />

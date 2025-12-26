@@ -4,6 +4,8 @@ import "aos/dist/aos.css";
 import Avatar from "../../../assets/img/engl-tch-3 - Copy.png";
 import AvatarMobil from "../../../assets/img/forMobil.png";
 import EnglTeach from "../../../assets/img/englTeach.png";
+import EnglTeachDarkMode from "../../../assets/img/englTeachDarkMode.png";
+
 import kahoot from "../../../assets/svg/kahoot.svg";
 import youtube from "../../../assets/svg/youtube1.svg";
 import telegram from "../../../assets/svg/telegram.svg";
@@ -43,7 +45,7 @@ const Hero = ({ theme }) => {
       <ScrollSpot id="scroll-section"> </ScrollSpot>
       {/* <HeroAnimation /> */}
 
-      <Title>Yurii Kuksa</Title>
+      <Title>Yuri Kuksa</Title>
       <AvatarDeskTop
         data-aos="zoom-out"
         data-aos-duration="1500"
@@ -62,8 +64,8 @@ const Hero = ({ theme }) => {
         <EnglTeachImg
           data-aos="zoom-out-down"
           data-aos-duration="3000"
-          src={EnglTeach}
-          alt="avatar for mobile"
+          src={theme === "dark" ? EnglTeachDarkMode : EnglTeach}
+          alt="English teacher logo"
         />
       </AbsoluteBox>
 
