@@ -36,16 +36,20 @@ import {
   Stad,
   ScrollSpot,
   LinkSittard,
+  Cursor,
+  Typing,
 } from "./Home.Styled";
+import { useTypewriterEffect } from "../../../hooks/useTypewriterEffect";
 
 AOS.init();
 const Hero = ({ theme }) => {
+  const displayText = useTypewriterEffect();
   return (
     <MainBox style={{ position: "relative" }}>
       <ScrollSpot id="scroll-section"> </ScrollSpot>
       {/* <HeroAnimation /> */}
 
-      <Title>Yuri Kuksa</Title>
+      <Title $theme={theme}>Yuri Kuksa</Title>
       <AvatarDeskTop
         data-aos="zoom-out"
         data-aos-duration="1500"
@@ -68,6 +72,10 @@ const Hero = ({ theme }) => {
           alt="English teacher logo"
         />
       </AbsoluteBox>
+      <Typing>
+        {displayText}
+        <Cursor>|</Cursor>
+      </Typing>
 
       <DownloadContainer>
         <DownlResume>Download Resume</DownlResume>
@@ -149,6 +157,7 @@ const Hero = ({ theme }) => {
           href="https://maps.app.goo.gl/h4mE4AAsnyuUmMsn7"
           target="_blank"
           rel="noopener noreferrer"
+          $theme={theme}
         >
           Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands
         </LinkSittard>

@@ -12,7 +12,15 @@ export const MainBox = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: rgb(199, 198, 198);
+  ${({ $theme }) =>
+    $theme === "dark"
+      ? css`
+          color: rgb(199, 198, 198);
+        `
+      : css`
+          color: rgba(113, 107, 107, 1);
+        `}
+
   font-size: 63px;
   text-align: center;
   font-weight: 700;
@@ -90,7 +98,6 @@ export const AvatarDeskTop = styled.img`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
-    margin-bottom: 30px;
     margin-bottom: auto;
     max-width: 635px;
     margin-left: auto;
@@ -242,10 +249,56 @@ export const LinkSittard = styled.a`
     ${({ $theme }) =>
       $theme === "dark"
         ? css`
-            color: #6495ed;
+            color: #a3b3c2;
           `
         : css`
-            color: #a3b3c2;
+            color: #6495ed;
           `}
+  }
+`;
+
+export const Cursor = styled.span`
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+`;
+
+export const Typing = styled.p`
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #647789ff;
+  text-align: center;
+  position: relative;
+  transform: translateY(-40px);
+
+  /* Мобільна версія - статичний */
+  @media (max-width: 639px) {
+    position: relative;
+    transform: translateY(-30px);
+    width: 100%;
+  }
+
+  /* Десктоп - центрований абсолютно */
+  @media (min-width: 640px) {
+    font-size: 1.75rem;
+    transform: translateY(-50px);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    transform: translateY(-60px);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2.25rem;
+    transform: translateY(-100px);
   }
 `;

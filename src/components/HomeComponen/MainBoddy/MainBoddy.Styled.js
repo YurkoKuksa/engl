@@ -71,6 +71,7 @@ export const linkTheme = {
       color: rgb(0, 0, 103);
     }
   `,
+
   dark: css`
     color: #647789ff;
 
@@ -81,7 +82,6 @@ export const linkTheme = {
 };
 
 export const LinkS = styled.a`
-  /* color: #000099; */
   display: inline-block;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -90,7 +90,6 @@ export const LinkS = styled.a`
 
   &:hover {
     transform: scale(1.03);
-    /* color: rgb(0, 0, 103); */
     text-decoration: underline;
   }
 
