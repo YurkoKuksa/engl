@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import {
   HeaderContainer,
   BurgerMenuWrapper,
@@ -12,6 +13,7 @@ import Navigator from "./Navigator/Navigator";
 const Header = ({ theme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const location = useLocation();
 
   const isMobile = () => {
     return (
@@ -41,6 +43,28 @@ const Header = ({ theme }) => {
       setIsMenuOpen((prev) => !prev);
     }
   };
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent page scroll when menu is open (only on mobile/tablet)
+  useEffect(() => {
+    if (isMobile()) {
+      if (isMenuOpen) {
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+          document.body.style.overflow = originalOverflow;
+        };
+      } else {
+        // Restore scroll when menu closes on mobile
+        document.body.style.overflow = "";
+      }
+    }
+    // On desktop, don't prevent scrolling
+  }, [isMenuOpen]);
 
   // Close menu when clicking outside on mobile
   useEffect(() => {
@@ -76,7 +100,7 @@ const Header = ({ theme }) => {
         </BurgerMenuWrapper>
         <NavigationWrapper $isOpen={isMenuOpen}>
           <NavigationContent $isOpen={isMenuOpen}>
-            <Navigator />
+            <Navigator onNavigate={() => setIsMenuOpen(false)} />
           </NavigationContent>
         </NavigationWrapper>
       </HoverArea>

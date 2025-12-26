@@ -67,8 +67,17 @@ export const DownloadFile = styled.img`
 
   &:hover {
     transform: scale(1.1);
-    filter: invert(7%) sepia(100%) saturate(4527%) hue-rotate(244deg)
-      brightness(131%) contrast(152%);
+
+    ${({ $theme }) =>
+      $theme === "dark"
+        ? css`
+            filter: invert(70%) sepia(15%) saturate(400%) hue-rotate(170deg)
+              brightness(90%) contrast(85%);
+          `
+        : css`
+            filter: invert(46%) sepia(73%) saturate(2120%) hue-rotate(197deg)
+              brightness(96%) contrast(94%);
+          `}
   }
 
   @media screen and (min-width: 768px) {
@@ -228,7 +237,15 @@ export const LinkSittard = styled.a`
     font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    color: blue;
     font-weight: 500;
+
+    ${({ $theme }) =>
+      $theme === "dark"
+        ? css`
+            color: #6495ed;
+          `
+        : css`
+            color: #a3b3c2;
+          `}
   }
 `;

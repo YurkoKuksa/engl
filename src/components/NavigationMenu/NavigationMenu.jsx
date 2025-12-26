@@ -5,21 +5,47 @@ import {
   NavList,
 } from "./NavigationMenu.Styled";
 
-const NavigationMenu = () => {
+const NavigationMenu = ({ onNavigate }) => {
   const location = useLocation();
 
   const navItems = [
     { path: "/", label: "Main" },
-    { path: "/underсonstruction", label: "Articles" },
-    { path: "/underсonstruction", label: "Certification" },
-    { path: "/underсonstruction", label: "Sources" },
-    { path: "/underсonstruction", label: "FeedBack" },
+    { path: "/c", label: "Articles" },
+    { path: "/sources", label: "Sources" },
+    { path: "/c3", label: "Certification" },
+    { path: "/contacts", label: "Contacts" },
   ];
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
     });
+  };
+
+  const handleNavigate = () => {
+    scrollToTop();
+    if (onNavigate) {
+      onNavigate();
+    }
+  };
+
+  // Normalize pathname for comparison (remove trailing slashes, handle root path)
+  const normalizePath = (path) => {
+    if (path === "/" || path === "") return "/";
+    return path.replace(/\/$/, "");
+  };
+
+  const isActive = (itemPath) => {
+    const normalizedPathname = normalizePath(location.pathname);
+    const normalizedItemPath = normalizePath(itemPath);
+
+    // For root path, match exactly
+    if (normalizedItemPath === "/") {
+      return normalizedPathname === "/";
+    }
+
+    // For other paths, exact match
+    return normalizedPathname === normalizedItemPath;
   };
 
   return (
@@ -29,8 +55,8 @@ const NavigationMenu = () => {
           <li key={item.path}>
             <NavLink
               to={item.path}
-              $isActive={location.pathname === item.path}
-              onClick={scrollToTop}
+              $isActive={isActive(item.path)}
+              onClick={handleNavigate}
             >
               {item.label}
             </NavLink>

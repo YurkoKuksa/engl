@@ -12,6 +12,7 @@ export default function UnderConstruction() {
       style={{
         background:
           "linear-gradient(135deg, #8B6F47 0%, #6F4E37 50%, #5C4033 100%)",
+        opacity: 0.95,
       }}
     >
       <div className="text-center space-y-12 z-10 max-w-2xl">

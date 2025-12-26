@@ -45,6 +45,10 @@ export const NavLink = styled(Link)`
       /* color: #ffffff; */
       color: #231a10;
       background-color: rgba(255, 255, 255, 0.15);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     `}
 
   @media screen and (min-width: 768px) {

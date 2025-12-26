@@ -66,10 +66,13 @@ export const NavigationContent = styled.div`
   background: linear-gradient(
     /* 135deg, */
       /* rgba(26, 26, 26, 0.95) 0%,
-    rgba(74, 74, 74, 0.95) 100% */ 180deg,
+    rgba(74, 74, 74, 0.95) 100% */
+      /* 180deg,
     #c8a97e,
     #ad8456,
-    #91623a
+    #91623a */ 145deg,
+    #9fb0b5,
+    #c6d1d4
   );
 
   backdrop-filter: blur(10px);

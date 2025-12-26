@@ -14,7 +14,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="sources" element={<Sources />} />
           <Route path="contacts" element={<Contacts />} />
-          <Route path="underсonstruction" element={<UnderConstruction />} />
+          <Route path="c" element={<UnderConstruction />} />
+          <Route path="c2" element={<UnderConstruction />} />
+          <Route path="c3" element={<UnderConstruction />} />
+          <Route path="c4" element={<UnderConstruction />} />
         </Route>
       </Routes>
     </>
