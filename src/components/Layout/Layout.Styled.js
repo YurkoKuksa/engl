@@ -1,5 +1,13 @@
 import styled, { css } from "styled-components";
 
+export const TextStyle = styled.div`
+  ${({ $theme }) =>
+    $theme === "dark" &&
+    css`
+      color: #ced6deff;
+    `}
+`;
+
 // import back from "../../assets/img/back.webp";
 
 // export const LayoutContainer = styled.div`
@@ -20,11 +28,3 @@ import styled, { css } from "styled-components";
 //   background-position: center;
 //   background-size: cover;
 // `;
-
-export const TextStyle = styled.div`
-  ${({ $theme }) =>
-    $theme === "dark" &&
-    css`
-      color: #ced6deff;
-    `}
-`;

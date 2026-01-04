@@ -43,6 +43,52 @@ import { useTypewriterEffect } from "../../../hooks/useTypewriterEffect";
 
 AOS.init();
 const Hero = ({ theme }) => {
+  const IconLinksSet = [
+    {
+      href: "https://create.kahoot.it/profiles/3b1e808e-d78f-4971-9343-18e15b21ac9b",
+      alt: "kahoot",
+      img: kahoot,
+      Component: KahootBox,
+      ImgComponent: KahootSvg,
+    },
+    {
+      href: "https://www.youtube.com/channel/UC84CYmL9e0_F5zyDFxJhTqw",
+      alt: "youtube",
+      img: youtube,
+      ImgComponent: LongSvg,
+    },
+    {
+      href: "https://www.linkedin.com/in/yurii-kuksa/",
+      alt: "linkedIn",
+      img: linkedIn,
+      ImgComponent: SvgItm,
+    },
+    {
+      href: "https://wa.me/380939395112",
+      alt: "whatsapp",
+      img: whatsapp,
+      ImgComponent: SvgItm,
+    },
+    {
+      href: "https://t.me/esl_tutoring",
+      alt: "telegram",
+      img: telegram,
+      ImgComponent: SvgItm,
+    },
+    {
+      href: "mailto:iurikuksa@gmail.com",
+      alt: "mail",
+      img: mail,
+      ImgComponent: LongSvg,
+    },
+    {
+      href: "tel:+31616319115",
+      alt: "phone1",
+      img: phone1,
+      ImgComponent: SvgItm,
+    },
+  ];
+
   const displayText = useTypewriterEffect();
   return (
     <MainBox style={{ position: "relative" }}>
@@ -89,69 +135,21 @@ const Hero = ({ theme }) => {
       </DownloadContainer>
 
       <ContactIcons>
-        <li>
-          <a
-            href="https://create.kahoot.it/profiles/3b1e808e-d78f-4971-9343-18e15b21ac9b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <KahootBox>
-              <KahootSvg src={kahoot} alt="kahoot" />
-            </KahootBox>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UC84CYmL9e0_F5zyDFxJhTqw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LongSvg src={youtube} alt="youtube" />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://www.linkedin.com/in/yurii-kuksa/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SvgItm src={linkedIn} alt="linkedIn" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/380939395112"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SvgItm src={whatsapp} alt="whatsapp" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://t.me/esl_tutoring"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SvgItm src={telegram} alt="telegram" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:iurikuksa@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LongSvg src={mail} alt="mail" />
-          </a>
-        </li>
-        <li>
-          <a href="tel:+31616319115" target="_blank" rel="noopener noreferrer">
-            <SvgItm src={phone1} alt="phone1" />
-          </a>
-        </li>
+        {IconLinksSet.map(({ href, alt, img, Component, ImgComponent }) => (
+          <li key={alt}>
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {Component ? (
+                <Component>
+                  <ImgComponent src={img} alt={alt} />
+                </Component>
+              ) : (
+                <ImgComponent src={img} alt={alt} />
+              )}
+            </a>
+          </li>
+        ))}
       </ContactIcons>
+
       <Stad>
         <LinkSittard
           href="https://maps.app.goo.gl/h4mE4AAsnyuUmMsn7"

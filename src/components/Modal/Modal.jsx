@@ -1,18 +1,20 @@
-import ReactDOM from "react-dom";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { MainModalBox, CustomButton, ModalImage } from "./ModalStyled";
 
-// import { Icon } from "../Icon/Icon";
-import { CustomBox, CustomButton, MainModalBox } from "./ModalStyled";
+export const Modal = ({ toggleModal, imageSrc, imageAlt }) => {
+  const [isClosing, setIsClosing] = useState(false);
 
-const modalRoot = document.querySelector("#modalRoot");
-export const Modal = ({ children, toggleModal, className = "" }) => {
+  const handleClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      toggleModal();
+    }, 500);
+  }, [toggleModal]);
+
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.code === "Escape") {
-        toggleModal();
-      }
+      if (e.code === "Escape") handleClose();
     };
-
     document.addEventListener("keydown", handleEscape);
     document.body.style.overflow = "hidden";
 
@@ -20,23 +22,18 @@ export const Modal = ({ children, toggleModal, className = "" }) => {
       document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "auto";
     };
-  }, [toggleModal]);
+  }, [handleClose]);
 
-  const handleClickOnBackdrop = (e) => {
-    if (e.currentTarget === e.target) {
-      toggleModal();
-    }
-  };
+  return (
+    <MainModalBox onClick={handleClose} $isClosing={isClosing}>
+      <CustomButton onClick={handleClose}>✕</CustomButton>
 
-  return ReactDOM.createPortal(
-    <MainModalBox onClick={handleClickOnBackdrop}>
-      <CustomBox>
-        <CustomButton type="button" onClick={toggleModal}>
-          {/* <Icon name="close" className="fill-[#1E1E1E]" size="20" /> */}
-        </CustomButton>
-        {children}
-      </CustomBox>
-    </MainModalBox>,
-    modalRoot
+      <ModalImage
+        src={imageSrc}
+        alt={imageAlt}
+        onClick={(e) => e.stopPropagation()}
+        $isClosing={isClosing}
+      />
+    </MainModalBox>
   );
 };
