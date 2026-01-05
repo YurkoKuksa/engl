@@ -5,6 +5,9 @@ export const Modal = ({ toggleModal, imageSrc, imageAlt }) => {
   const [isClosing, setIsClosing] = useState(false);
 
   const handleClose = useCallback(() => {
+    // Повертаємо scroll ПЕРЕД анімацією закриття
+    document.body.style.overflow = "auto";
+
     setIsClosing(true);
     setTimeout(() => {
       toggleModal();
@@ -15,11 +18,13 @@ export const Modal = ({ toggleModal, imageSrc, imageAlt }) => {
     const handleEscape = (e) => {
       if (e.code === "Escape") handleClose();
     };
+
     document.addEventListener("keydown", handleEscape);
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
+      // Тут вже не потрібно, бо ми це робимо в handleClose
       document.body.style.overflow = "auto";
     };
   }, [handleClose]);

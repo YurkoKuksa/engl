@@ -157,7 +157,7 @@ const Hero = ({ theme }) => {
           rel="noopener noreferrer"
           $theme={theme}
         >
-          Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands
+          📍 Sittard &nbsp; &nbsp; | &nbsp; &nbsp; Netherlands
         </LinkSittard>
       </Stad>
     </MainBox>
