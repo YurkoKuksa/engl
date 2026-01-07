@@ -14,6 +14,9 @@ const NavigationMenu = ({ onNavigate }) => {
     { path: "/sources", label: "Sources" },
     { path: "/c3", label: "Certification" },
     { path: "/contacts", label: "Contacts" },
+    // youtube videos
+    // resume
+    //supporting documents with password
   ];
 
   const scrollToTop = () => {
