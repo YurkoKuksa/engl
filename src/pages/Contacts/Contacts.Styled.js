@@ -1,94 +1,212 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const FeedbackForm = styled.form`
+export const PageContainer = styled.div`
+  min-height: 100vh;
+  padding: 50px 20px;
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); */
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  //   background: rgba(0, 0, 0, 0.25);
-  padding: 30px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  //   border: 1px solid rgba(255, 255, 255, 0.1);
-`;
-
-export const StarsContainer = styled.div`
-  display: flex;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
 `;
 
-export const Star = styled.button`
-  background: none;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  transition: transform 0.2s;
-  color: ${(props) => (props.$filled ? "#ffd700" : "#999")};
+export const ContentWrapper = styled.div`
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+`;
 
-  &:hover {
-    transform: scale(1.2);
+export const HeaderSection = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const MainTitle = styled.h1`
+  font-size: 42px;
+  /* color: #2c3e50; */
+  margin: 0;
+  font-weight: 700;
+  /* ${({ $theme }) =>
+    $theme === "dark"
+      ? css`
+          color: rgb(199, 198, 198);
+        `
+      : css`
+          color: rgba(113, 107, 107, 1);
+        `} */
+
+  ${(
+    { theme } // 👈 Тепер theme з контексту
+  ) =>
+    theme.mode === "dark"
+      ? css`
+          color: rgb(199, 198, 198);
+        `
+      : css`
+          color: rgba(113, 107, 107, 1);
+        `}
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
   }
 `;
 
+export const Subtitle = styled.p`
+  font-size: 20px;
+  /* color: #5a6b70; */
+  /* ${({ $theme }) =>
+    $theme === "dark"
+      ? css`
+          color: #ced6deff;
+        `
+      : css`
+          color: #5a6b70;
+        `} */
+
+  ${(
+    { theme } // 👈 theme з контексту
+  ) =>
+    theme.mode === "dark"
+      ? css`
+          color: #ced6deff;
+        `
+      : css`
+          color: #5a6b70;
+        `}
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+// export const IntroText = styled.p`
+//   font-size: 16px;
+//   color: #7f8c8d;
+//   line-height: 1.8;
+//   max-width: 650px;
+//   margin: 0 auto;
+
+//   @media screen and (max-width: 768px) {
+//     font-size: 15px;
+//   }
+// `;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 20px;
+  }
+`;
+
+export const FormTitle = styled.h2`
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  text-align: center;
+`;
+
+export const InputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const Label = styled.label`
+  font-size: 14px;
+  font-weight: 600;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+export const Required = styled.span`
+  color: #e74c3c;
+`;
+
 export const Input = styled.input`
-  padding: 12px 16px;
-  border: 2px solid
-    ${(props) => (props.$error ? "#ff4444" : "rgba(255, 255, 255, 0.2)")};
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  padding: 14px 18px;
+  border: 2px solid ${(props) => (props.$error ? "#e74c3c" : "#dfe6e9")};
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #2c3e50;
   font-size: 16px;
   transition: all 0.3s;
+  font-family: inherit;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: #95a5a6;
   }
 
   &:focus {
     outline: none;
-    border-color: #4a9eff;
-    background: rgba(255, 255, 255, 0.15);
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
   }
 `;
 
 export const Textarea = styled.textarea`
-  padding: 12px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  padding: 14px 18px;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  background: #f8f9fa;
+  color: #2c3e50;
   font-size: 16px;
-  min-height: 120px;
+  min-height: 150px;
   resize: vertical;
   font-family: inherit;
   transition: all 0.3s;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: #95a5a6;
   }
 
   &:focus {
     outline: none;
-    border-color: #4a9eff;
-    background: rgba(255, 255, 255, 0.15);
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
   }
 `;
 
+export const ErrorText = styled.span`
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
 export const SubmitButton = styled.button`
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #4a9eff 0%, #357abd 100%);
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: 10px;
 
   &:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 158, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
   }
 
   &:disabled {
@@ -97,25 +215,20 @@ export const SubmitButton = styled.button`
   }
 `;
 
-export const ErrorText = styled.span`
-  color: #ff6b6b;
-  font-size: 14px;
-  margin-top: -10px;
-`;
-
 export const SuccessMessage = styled.div`
-  padding: 16px;
-  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  padding: 20px;
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
   color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
   font-weight: 600;
-  animation: slideIn 0.3s ease-out;
+  font-size: 18px;
+  animation: slideIn 0.4s ease-out;
 
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-20px);
     }
     to {
       opacity: 1;
@@ -123,71 +236,70 @@ export const SuccessMessage = styled.div`
     }
   }
 `;
-export const ContactBox = styled.div`
+
+export const ContactIconsSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 `;
 
-export const ContactList = styled.ul`
-  list-style: none;
-  padding: 0;
+export const IconsTitle = styled.h3`
+  font-size: 24px;
+  /* color: #2c3e50; */
+  /* ${({ $theme }) =>
+    $theme === "dark"
+      ? css`
+          color: rgb(199, 198, 198);
+        `
+      : css`
+          color: rgba(113, 107, 107, 1);
+        `} */
+  ${(
+    { theme } // 👈 theme з контексту
+  ) =>
+    theme.mode === "dark"
+      ? css`
+          color: rgb(199, 198, 198);
+        `
+      : css`
+          color: rgba(113, 107, 107, 1);
+        `}
+
   margin: 0;
-`;
-
-export const ListItem = styled.li`
-  margin-bottom: 15px;
-
-  a {
-    color: #c4c4c4;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-
-    &:hover {
-      color: #fff;
-      transform: scale(1.02);
-    }
-  }
+  text-align: center;
 `;
 
 export const ContactIcons = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
 
   li {
     transition: transform 0.3s;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
   }
 
   img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
     transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
     }
-  }
-`;
-
-export const LocationLink = styled.a`
-  color: #c4c4c4;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s;
-  display: inline-block;
-
-  &:hover {
-    color: #fff;
-    transform: scale(1.02);
   }
 `;
