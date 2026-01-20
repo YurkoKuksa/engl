@@ -1,50 +1,29 @@
 [
   {
-    "id": "art-001",
-
-    "type": "article",
-    "title": "How to Teach English Effectively",
-    "coverImg": "",
-    "date": "2026-01-12",
-    "description": "Practical ESL teaching tips for modern classrooms and online learning environments.",
-    "tags": ["ESL", "Teaching", "Methods"],
-    "readingTime": "6 min",
-    "url": "/articles/how-to-teach-english"
-  },
-  {
     "id": "yt-001",
+    "slug": "esl-mistakes",
+    "content": "esl-mistakes",
     "type": "youtube",
-    "title": "Common ESL Mistakes",
-    "coverImg": "",
-    "date": "2026-01-05",
-    "description": "Video lesson covering the most frequent grammar mistakes made by ESL learners.",
-    "tags": ["ESL", "Grammar", "Video"],
-    "youtubeId": "dQw4w9WgXcQ",
-    "duration": "12:34",
-    "url": "https://youtube.com/watch?v=dQw4w9WgXcQ"
+    "title": "Learn Birds in English 🐦 | Easy Vocabulary for Beginners",
+    "coverImg": "/img/BlogImg/basic_birds.jpg",
+    "date": "2026-01-19",
+    "description": "In this video, you will learn the basic words related to the topic \"Birds\":\nBird, Nest, Pigeon, Crow, Chicken, Duck, Goose, Turkey, Parrot.",
+    "tags": ["Birds", "Basic", "Beginner"],
+    "youtubeId": "3h4Kan4Kpc8",
+    "duration": "3:44",
+    "author": "Yurko Kuksa"
   },
   {
-    "id": "art-002",
+    "id": "art-001",
     "slug": "beta-gen",
+    "content": "beta-gen",
     "type": "article",
     "title": "Beta Gen",
     "coverImg": "/img/BlogImg/beta_baby-removebg-preview.png",
-    "date": "2026-01-15",
-    "description": "Practical ESL teaching tips for modern classrooms and online learning environments.",
-    "tags": ["ESL", "Teaching", "Methods"],
-    "readingTime": "6 min",
-    "url": "/articles/how-to-teach-english"
-  },
-  {
-    "id": "yt-002",
-    "type": "youtube",
-    "title": "Common ESL Mistakes",
-    "coverImg": "",
-    "date": "2026-01-07",
-    "description": "Video lesson covering the most frequent grammar mistakes made by ESL learners.",
-    "tags": ["ESL", "Grammar", "Video"],
-    "youtubeId": "dQw4w9WgXcQ",
-    "duration": "12:34",
-    "url": "https://youtube.com/watch?v=dQw4w9WgXcQ"
+    "date": "2025-12-24",
+    "description": "How Generation Beta will grow up with AI, the future of education, and the role of intelligent systems in shaping learning and critical skills.",
+    "tags": ["Beta Gen", "AGI", "AI"],
+    "readingTime": "",
+    "author": "Yurko Kuksa"
   }
 ]

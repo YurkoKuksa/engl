@@ -6,6 +6,7 @@ import Sources from "./pages/Sources/Sources";
 import Contacts from "./pages/Contacts/Contacts";
 import UnderConstruction from "./pages/DefaultPages/UnderConstructionPage/UnderConstructionPage";
 import PublicationMenu from "./pages/Publications/PublicationMenu/PublicationsMenuPage";
+import Content from "./pages/Publications/PublicationPage/PublicationPage";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="sources" element={<Sources />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="publications" element={<PublicationMenu />} />
-          <Route path="publications/:slug" element={<UnderConstruction />} />
+          <Route path="publications/:slug" element={<Content />} />
 
           <Route path="c2" element={<UnderConstruction />} />
           <Route path="c3" element={<UnderConstruction />} />

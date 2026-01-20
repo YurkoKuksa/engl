@@ -24,6 +24,8 @@ import {
 import publicationsData from "../../../data/Publications/Publication.json";
 import defaultPicture from "../../../assets/img/BlogImg/123.jpg";
 
+// import Background from "../../../hooks/useAnimatedBackground";
+
 const PublicationsMenuPage = () => {
   const { theme } = useOutletContext();
   const [hoveredId, setHoveredId] = useState(null);
@@ -31,6 +33,7 @@ const PublicationsMenuPage = () => {
   return (
     <ThemeProvider theme={{ mode: theme }}>
       <PageContainer>
+        {/* <Background /> */}
         <AnimatedBackground>
           {[...Array(20)].map((_, i) => (
             <Particle
@@ -87,7 +90,11 @@ const PublicationsMenuPage = () => {
                         day: "numeric",
                       })}
                     </MetaItem>
-                    <MetaItem>⏱️ {item.readingTime || item.duration}</MetaItem>
+
+                    <MetaItem>
+                      {item.readingTime || item.duration ? "⏱️" : ""}
+                      {item.readingTime || item.duration}
+                    </MetaItem>
                   </CardMeta>
 
                   <TagsContainer>
