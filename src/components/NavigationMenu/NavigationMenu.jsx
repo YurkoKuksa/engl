@@ -10,13 +10,13 @@ const NavigationMenu = ({ onNavigate }) => {
 
   const navItems = [
     { path: "/", label: "Main" },
-    { path: "/c", label: "Articles" },
+    { path: "/publications", label: "Publications" },
     // { path: "/sources", label: "Sources" },
     // { path: "/c3", label: "Certification" },
     { path: "/contacts", label: "Contacts" },
     // youtube videos
     // resume
-    //supporting documents with password
+    //supporting documents with password  Publications
   ];
 
   const scrollToTop = () => {

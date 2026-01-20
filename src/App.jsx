@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Sources from "./pages/Sources/Sources";
 import Contacts from "./pages/Contacts/Contacts";
 import UnderConstruction from "./pages/DefaultPages/UnderConstructionPage/UnderConstructionPage";
+import PublicationMenu from "./pages/Publications/PublicationMenu/PublicationsMenuPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="sources" element={<Sources />} />
           <Route path="contacts" element={<Contacts />} />
-          <Route path="c" element={<UnderConstruction />} />
+          <Route path="publications" element={<PublicationMenu />} />
           <Route path="c2" element={<UnderConstruction />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />

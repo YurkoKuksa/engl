@@ -29,18 +29,7 @@ export const MainTitle = styled.h1`
   /* color: #2c3e50; */
   margin: 0;
   font-weight: 700;
-  /* ${({ $theme }) =>
-    $theme === "dark"
-      ? css`
-          color: rgb(199, 198, 198);
-        `
-      : css`
-          color: rgba(113, 107, 107, 1);
-        `} */
-
-  ${(
-    { theme } // 👈 Тепер theme з контексту
-  ) =>
+  ${({ theme }) =>
     theme.mode === "dark"
       ? css`
           color: rgb(199, 198, 198);
@@ -56,19 +45,8 @@ export const MainTitle = styled.h1`
 
 export const Subtitle = styled.p`
   font-size: 20px;
-  /* color: #5a6b70; */
-  /* ${({ $theme }) =>
-    $theme === "dark"
-      ? css`
-          color: #ced6deff;
-        `
-      : css`
-          color: #5a6b70;
-        `} */
 
-  ${(
-    { theme } // 👈 theme з контексту
-  ) =>
+  ${({ theme }) =>
     theme.mode === "dark"
       ? css`
           color: #ced6deff;
@@ -251,17 +229,7 @@ export const ContactIconsSection = styled.div`
 export const IconsTitle = styled.h3`
   font-size: 24px;
   /* color: #2c3e50; */
-  /* ${({ $theme }) =>
-    $theme === "dark"
-      ? css`
-          color: rgb(199, 198, 198);
-        `
-      : css`
-          color: rgba(113, 107, 107, 1);
-        `} */
-  ${(
-    { theme } // 👈 theme з контексту
-  ) =>
+  ${({ theme }) =>
     theme.mode === "dark"
       ? css`
           color: rgb(199, 198, 198);
