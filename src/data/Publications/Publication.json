@@ -1,6 +1,7 @@
 [
   {
     "id": "art-001",
+
     "type": "article",
     "title": "How to Teach English Effectively",
     "coverImg": "",
@@ -24,6 +25,7 @@
   },
   {
     "id": "art-002",
+    "slug": "beta-gen",
     "type": "article",
     "title": "Beta Gen",
     "coverImg": "/img/BlogImg/beta_baby-removebg-preview.png",

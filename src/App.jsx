@@ -16,6 +16,8 @@ function App() {
           <Route path="sources" element={<Sources />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="publications" element={<PublicationMenu />} />
+          <Route path="publications/:slug" element={<UnderConstruction />} />
+
           <Route path="c2" element={<UnderConstruction />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />

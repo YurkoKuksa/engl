@@ -28,8 +28,6 @@ const PublicationsMenuPage = () => {
   const { theme } = useOutletContext();
   const [hoveredId, setHoveredId] = useState(null);
 
-  // console.log("Publications data:", publicationsData);
-
   return (
     <ThemeProvider theme={{ mode: theme }}>
       <PageContainer>
