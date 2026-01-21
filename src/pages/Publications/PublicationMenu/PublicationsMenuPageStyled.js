@@ -15,7 +15,7 @@ const float = keyframes`
 
 export const PageContainer = styled.div`
   min-height: 100vh;
-  padding: 80px 20px 40px;
+  padding: 50px 20px 40px;
   position: relative;
   overflow: hidden;
 `;
@@ -137,8 +137,8 @@ export const TypeBadge = styled.div`
         ? "rgba(255, 0, 0, 0.8)"
         : "rgba(255, 0, 0, 0.9)"
       : theme.mode === "dark"
-      ? "rgba(52, 152, 219, 0.8)"
-      : "rgba(52, 152, 219, 0.9)"};
+        ? "rgba(52, 152, 219, 0.8)"
+        : "rgba(52, 152, 219, 0.9)"};
   color: white;
   border-radius: 8px;
   font-size: 12px;

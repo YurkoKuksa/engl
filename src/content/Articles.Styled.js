@@ -45,9 +45,18 @@ export const ArticleSubtitle = styled.h3`
 export const Paragraph = styled.p`
   margin: 0 0 20px 0;
   text-align: justify;
+  text-indent: 30px;
+
+  &:first-child {
+    text-indent: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-indent: 20px;
   }
 `;
 

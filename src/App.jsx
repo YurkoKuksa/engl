@@ -7,6 +7,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import UnderConstruction from "./pages/DefaultPages/UnderConstructionPage/UnderConstructionPage";
 import PublicationMenu from "./pages/Publications/PublicationMenu/PublicationsMenuPage";
 import Content from "./pages/Publications/PublicationPage/PublicationPage";
+import NotFound from "./pages/DefaultPages/NotFoundPage/NotFound1";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="c2" element={<UnderConstruction />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />
-        </Route>
+        </Route>{" "}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

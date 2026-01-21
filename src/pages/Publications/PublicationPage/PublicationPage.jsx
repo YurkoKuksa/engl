@@ -23,7 +23,8 @@ import {
 
 import publicationsData from "../../../data/Publications/Publication.json";
 import { articlesMap } from "../../../content";
-import ArticleNotFound from "../../DefaultPages/ArticleContentNotFound/ArticleContentNotFound";
+import ArticleNotFound from "../../DefaultPages/ArticleContentNotFound/ArticleContentNotFound1";
+import PublicationNotFound from "../../DefaultPages/PublicationNotFound/PublicationNotFound";
 
 // import Background from "../../../hooks/useAnimatedBackground";
 
@@ -32,20 +33,30 @@ const PublicationPage = () => {
   const { theme } = useOutletContext();
 
   const publication = publicationsData.find((item) => item.slug === slug);
+  // const publication = publicationsData.find(
+  //   (item) =>
+  //     item.slug === slug &&
+  //     (item.type === "youtube" ||
+  //       (item.type === "article" && item.content && articlesMap[item.content])),
+  // );
+
+  const isArticle = publication?.type === "article";
+  const ArticleComponent =
+    isArticle && publication?.content ? articlesMap[publication.content] : null;
 
   if (!publication) {
     return (
       <ThemeProvider theme={{ mode: theme }}>
         <PageContainer>
           <ContentWrapper>
-            <h2>Publication not found</h2>
+            <PublicationNotFound />
           </ContentWrapper>
         </PageContainer>
       </ThemeProvider>
     );
   }
 
-  const ArticleComponent = articlesMap[publication.content];
+  // const ArticleComponent = articlesMap[publication.content];
 
   return (
     <ThemeProvider theme={{ mode: theme }}>
@@ -64,10 +75,8 @@ const PublicationPage = () => {
             />
           ))}
         </AnimatedBackground>
-
+        <BackButton to="/publications">← Back to Publications</BackButton>
         <ContentWrapper>
-          <BackButton to="/publications">← Back to Publications</BackButton>
-
           <Header>
             <Title>{publication.title}</Title>
             {publication.description && (
@@ -85,7 +94,11 @@ const PublicationPage = () => {
               )}
 
               <ArticleContent>
-                {ArticleComponent ? <ArticleComponent /> : <ArticleNotFound />}
+                {isArticle && !ArticleComponent ? (
+                  <ArticleNotFound />
+                ) : (
+                  ArticleComponent && <ArticleComponent />
+                )}
               </ArticleContent>
             </>
           ) : (

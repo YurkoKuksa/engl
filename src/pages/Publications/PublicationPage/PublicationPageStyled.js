@@ -14,7 +14,7 @@ const float = keyframes`
 
 export const PageContainer = styled.div`
   min-height: 100vh;
-  padding: 80px 20px 40px;
+  padding: 50px 20px 40px;
   position: relative;
   overflow: hidden;
 `;
@@ -44,6 +44,39 @@ export const Particle = styled.div`
   left: var(--x);
   top: var(--y);
 `;
+
+// export const ContentWrapper = styled.div`
+//   max-width: 900px;
+//   margin: 0 auto;
+//   position: relative;
+//   z-index: 1;
+// `;
+
+// export const BackButton = styled(Link)`
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+//   padding: 10px 20px;
+//   background: ${({ theme }) =>
+//     theme.mode === "dark"
+//       ? "rgba(255, 255, 255, 0.05)"
+//       : "rgba(52, 152, 219, 0.1)"};
+//   color: ${({ theme }) =>
+//     theme.mode === "dark" ? "rgb(199, 198, 198)" : "rgba(52, 152, 219, 1)"};
+//   border-radius: 8px;
+//   text-decoration: none;
+//   font-weight: 500;
+//   margin-bottom: 30px;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background: ${({ theme }) =>
+//       theme.mode === "dark"
+//         ? "rgba(255, 255, 255, 0.1)"
+//         : "rgba(52, 152, 219, 0.2)"};
+//     transform: translateX(-4px);
+//   }
+// `;
 
 export const ContentWrapper = styled.div`
   max-width: 900px;
@@ -75,6 +108,14 @@ export const BackButton = styled(Link)`
         ? "rgba(255, 255, 255, 0.1)"
         : "rgba(52, 152, 219, 0.2)"};
     transform: translateX(-4px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    margin-bottom: 0;
+    z-index: 10;
   }
 `;
 
@@ -150,6 +191,25 @@ export const VideoWrapper = styled.div`
 
 export const ArticleContent = styled.article`
   margin-bottom: 50px;
+  padding: 40px;
+  background: ${({ theme }) =>
+    theme.mode === "dark"
+      ? "rgba(255, 255, 255, 0.03)"
+      : "rgba(255, 255, 255, 0.7)"};
+  border-radius: 16px;
+  box-shadow: ${({ theme }) =>
+    theme.mode === "dark"
+      ? "0 4px 20px rgba(0, 0, 0, 0.3)"
+      : "0 4px 20px rgba(0, 0, 0, 0.08)"};
+  border: 1px solid
+    ${({ theme }) =>
+      theme.mode === "dark"
+        ? "rgba(255, 255, 255, 0.05)"
+        : "rgba(0, 0, 0, 0.05)"};
+
+  @media screen and (max-width: 768px) {
+    padding: 25px 20px;
+  }
 `;
 
 export const Footer = styled.footer`
