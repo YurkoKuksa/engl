@@ -8,16 +8,8 @@ export const ListItem = styled.li`
   margin-bottom: 50px;
 `;
 
-export const PictureOne = styled.img`
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 92%;
-  max-width: 632px;
-  height: auto;
-
-  margin-bottom: 20px;
-  /* transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
+export const Shad = styled.div`
+  display: inline-block;
   border: 1px solid
     ${({ theme }) =>
       theme.mode === "dark"
@@ -49,6 +41,19 @@ export const PictureOne = styled.img`
   &:active {
     transform: translateY(-4px) scale(1.01);
   }
+`;
+
+export const PictureOne = styled.img`
+  /* display: block; */
+  will-change: transform;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 92%;
+  max-width: 632px;
+  height: auto;
+
+  margin-bottom: 20px;
 `;
 
 export const DescrText = styled.p`
