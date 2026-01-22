@@ -33,12 +33,6 @@ const PublicationPage = () => {
   const { theme } = useOutletContext();
 
   const publication = publicationsData.find((item) => item.slug === slug);
-  // const publication = publicationsData.find(
-  //   (item) =>
-  //     item.slug === slug &&
-  //     (item.type === "youtube" ||
-  //       (item.type === "article" && item.content && articlesMap[item.content])),
-  // );
 
   const isArticle = publication?.type === "article";
   const ArticleComponent =

@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Sources from "./pages/Sources/Sources";
 import Contacts from "./pages/Contacts/Contacts";
 import UnderConstruction from "./pages/DefaultPages/UnderConstructionPage/UnderConstructionPage";
-import PublicationMenu from "./pages/Publications/PublicationMenu/PublicationsMenuPage";
+import PublicationMenu from "./pages/Publications/PublicationMenu/Publ";
 import Content from "./pages/Publications/PublicationPage/PublicationPage";
 import NotFound from "./pages/DefaultPages/NotFoundPage/NotFound1";
 
