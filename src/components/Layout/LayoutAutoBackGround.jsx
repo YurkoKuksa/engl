@@ -5,70 +5,25 @@ import Header from "../Header/Header";
 import { ScrollUpBtn } from "../ScrollUpButton/ScrollUpButton";
 import Footer from "../Footer/Footer";
 
-import BlueSnow from "../BackG/SnowingV2";
-import EnglCoffee from "../BackG/EnglCoff";
-import ValentDay from "../BackG/ValentinesDay";
-import Spring from "../BackG/Spring";
-import Autumn from "../BackG/Autumn";
-import Summer from "../BackG/Summer";
-import Kupala from "../BackG/Kupala.jsx";
-import Christmas from "../BackG/Christmas.jsx";
-import ChristmasUkr from "../BackG/ChristmasUkr.jsx";
-import Carnaval from "../BackG/Carnaval.jsx";
+import backgrounds from "../../data/BackGround/BackGroundsList.jsx";
 
 const Layout = () => {
-  const backgrounds = {
-    blueSnow: {
-      Component: BlueSnow,
-      theme: "dark",
-    },
-    englCoffee: {
-      Component: EnglCoffee,
-      theme: "light",
-    },
-    love: {
-      Component: ValentDay,
-      theme: "light",
-    },
-    spring: {
-      Component: Spring,
-      theme: "light",
-    },
-    autumn: {
-      Component: Autumn,
-      theme: "light",
-    },
-    summer: {
-      Component: Summer,
-      theme: "light",
-    },
-    kupala: {
-      Component: Kupala,
-      theme: "dark",
-    },
-    christmas: {
-      Component: Christmas,
-      theme: "dark",
-    },
-    christukr: {
-      Component: ChristmasUkr,
-      theme: "dark",
-    },
-    carnav: {
-      Component: Carnaval,
-      theme: "light",
-    },
-  };
-
   const getSeasonalTheme = () => {
     const now = new Date();
     const month = now.getMonth() + 1;
     const day = now.getDate();
 
-    // 🎄 Різдво (24–26 грудня)
-    if (month === 12 && day >= 24 && day <= 26) {
+    // 🎄 Різдво (20–23 грудня)
+    if (month === 12 && day >= 20 && day <= 23) {
       return "christmas";
     }
+
+    // 🎄 Різдво Укр Тематика (24–26 грудня)
+    if (month === 12 && day >= 24 && day <= 26) {
+      return "christukr";
+    }
+
+    // ❄️ Новий рік (1 січня)
 
     // ❄️ Новий рік (27 грудня – 7 січня)
     if ((month === 12 && day >= 27) || (month === 1 && day <= 7)) {
@@ -95,6 +50,11 @@ const Layout = () => {
       return "spring";
     }
 
+    // День Народження (7 травня)
+    if (month === 5 && day >= 7 && day <= 10) {
+      return "bday";
+    }
+
     // 🌿 Купала (20–25 червня)
     if (month === 6 && day >= 20 && day <= 25) {
       return "kupala";
@@ -105,8 +65,8 @@ const Layout = () => {
       return "summer";
     }
 
-    // 🍂 Осінь (вересень–листопад)
-    if (month >= 9 && month <= 11) {
+    // 🍂 Осінь (жовтень–листопад)
+    if (month >= 10 && month <= 11) {
       return "autumn";
     }
 
@@ -114,7 +74,6 @@ const Layout = () => {
     return "englCoffee";
   };
 
-  // Використовуємо сезонну тему, якщо не вказана в даних
   const backgroundType = getSeasonalTheme();
   const { Component: BackgroundComponent, theme } = backgrounds[backgroundType];
 

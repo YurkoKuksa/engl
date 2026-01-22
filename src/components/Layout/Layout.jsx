@@ -5,61 +5,10 @@ import Header from "../Header/Header";
 import { ScrollUpBtn } from "../ScrollUpButton/ScrollUpButton";
 import Footer from "../Footer/Footer";
 
-import BlueSnow from "../BackG/SnowingV2";
-import EnglCoffee from "../BackG/EnglCoff";
-import ValentDay from "../BackG/ValentinesDay";
-import Spring from "../BackG/Spring";
-import Autumn from "../BackG/Autumn";
-import Summer from "../BackG/Summer";
-import Kupala from "../BackG/Kupala.jsx";
-import Christmas from "../BackG/Christmas.jsx";
-import ChristmasUkr from "../BackG/ChristmasUkr.jsx";
-import Carnaval from "../BackG/Carnaval.jsx";
+import backgrounds from "../../data/BackGround/BackGroundsList.jsx";
 
 const Layout = () => {
-  const backgrounds = {
-    blueSnow: {
-      Component: BlueSnow,
-      theme: "dark",
-    },
-    englCoffee: {
-      Component: EnglCoffee,
-      theme: "light",
-    },
-    love: {
-      Component: ValentDay,
-      theme: "light",
-    },
-    spring: {
-      Component: Spring,
-      theme: "light",
-    },
-    autumn: {
-      Component: Autumn,
-      theme: "light",
-    },
-    summer: {
-      Component: Summer,
-      theme: "light",
-    },
-    kupala: {
-      Component: Kupala,
-      theme: "dark",
-    },
-    christmas: {
-      Component: Christmas,
-      theme: "dark",
-    },
-    christukr: {
-      Component: ChristmasUkr,
-      theme: "dark",
-    },
-    carnav: {
-      Component: Carnaval,
-      theme: "light",
-    },
-  };
-
+  // підставляємо фон вручну:
   const backgroundType = "englCoffee";
   const { Component: BackgroundComponent, theme } = backgrounds[backgroundType];
   return (

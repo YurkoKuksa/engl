@@ -1,0 +1,58 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1e3a8a" opacity="0.1"/>
+  
+  <!-- Open book base -->
+  <path d="M 40 80 Q 40 70 50 70 L 95 70 L 95 140 L 50 140 Q 40 140 40 130 Z" 
+        fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+  <path d="M 105 70 L 150 70 Q 160 70 160 80 L 160 130 Q 160 140 150 140 L 105 140 Z" 
+        fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+  
+  <!-- Book pages detail -->
+  <line x1="95" y1="75" x2="95" y2="135" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <line x1="105" y1="75" x2="105" y2="135" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- American flag stripes on left page -->
+  <rect x="50" y="80" width="35" height="3" fill="#fff"/>
+  <rect x="50" y="86" width="35" height="3" fill="#fff"/>
+  <rect x="50" y="92" width="35" height="3" fill="#fff"/>
+  
+  <!-- Stars on flag -->
+  <circle cx="55" cy="81.5" r="1" fill="#1e3a8a"/>
+  <circle cx="62" cy="81.5" r="1" fill="#1e3a8a"/>
+  <circle cx="69" cy="81.5" r="1" fill="#1e3a8a"/>
+  <circle cx="76" cy="81.5" r="1" fill="#1e3a8a"/>
+  <circle cx="58.5" cy="87.5" r="1" fill="#1e3a8a"/>
+  <circle cx="65.5" cy="87.5" r="1" fill="#1e3a8a"/>
+  <circle cx="72.5" cy="87.5" r="1" fill="#1e3a8a"/>
+  
+  <!-- "ENGLISH" text on right page -->
+  <text x="113" y="90" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1e3a8a">ENG</text>
+  <text x="113" y="100" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1e3a8a">LISH</text>
+  
+  <!-- Speech bubble coming from book -->
+  <ellipse cx="145" cy="45" rx="35" ry="25" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+  <path d="M 130 60 L 120 70 L 135 65 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- American slang text in bubble -->
+  <text x="145" y="42" font-family="Comic Sans MS, cursive" font-size="11" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Hey!</text>
+  <text x="145" y="52" font-family="Comic Sans MS, cursive" font-size="9" fill="#1e3a8a" text-anchor="middle">Y'all</text>
+  
+  <!-- Pencil crossing the book -->
+  <rect x="70" y="105" width="60" height="8" fill="#fcd34d" stroke="#f59e0b" stroke-width="1" 
+        transform="rotate(-25 100 109)"/>
+  <polygon points="130,103 138,109 130,115" fill="#dc2626" 
+           transform="rotate(-25 100 109)"/>
+  <rect x="72" y="107" width="3" height="4" fill="#78716c" 
+        transform="rotate(-25 100 109)"/>
+  
+  <!-- Decorative stars around -->
+  <path d="M 30 50 L 32 55 L 37 55 L 33 58 L 35 63 L 30 60 L 25 63 L 27 58 L 23 55 L 28 55 Z" 
+        fill="#3b82f6" opacity="0.6"/>
+  <path d="M 170 120 L 172 125 L 177 125 L 173 128 L 175 133 L 170 130 L 165 133 L 167 128 L 163 125 L 168 125 Z" 
+        fill="#ef4444" opacity="0.6"/>
+  
+  <!-- Small USA badge -->
+  <circle cx="165" cy="165" r="18" fill="#1e3a8a" stroke="#fff" stroke-width="2"/>
+  <text x="165" y="168" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">USA</text>
+</svg>

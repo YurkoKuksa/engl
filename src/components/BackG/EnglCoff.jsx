@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+// import { ReactComponent as usaIcon } from "../../assets/svg/bg/usaIcon.svg";
 const EnglishCoffeeBackground = ({ children }) => {
   const [elements, setElements] = useState([]);
 
@@ -27,12 +28,36 @@ const EnglishCoffeeBackground = ({ children }) => {
       "book",
     ];
 
+    // const items = [
+    //   { type: "text", content: "A" },
+    //   { type: "text", content: "B" },
+    //   { type: "text", content: "C" },
+    //   { type: "text", content: "D" },
+    //   { type: "text", content: "E" },
+    //   { type: "text", content: "F" },
+    //   { type: "text", content: "read" },
+    //   { type: "text", content: "write" },
+    //   { type: "text", content: "speak" },
+    //   { type: "text", content: "learn" },
+    //   { type: "text", content: "USA" },
+    //   { type: "text", content: "NYC" },
+    //   { type: "text", content: "hello" },
+    //   { type: "text", content: "world" },
+    //   { type: "svg", content: <usaIcon /> },
+    //   { type: "emoji", content: "✍️" },
+    //   { type: "emoji", content: "🎓" },
+    //   { type: "emoji", content: "🗽" },
+    //   { type: "text", content: "study" },
+    //   { type: "text", content: "book" },
+
+    // ];
+
     // Перемішуємо елементи для уникнення повторів поруч
     const shuffledItems = [...items, ...items].sort(() => Math.random() - 0.5);
 
     // Створюємо сітку для рівномірного розподілу
-    const columns = 7; // кількість колонок
-    const rows = 5; // кількість рядів
+    const columns = 7;
+    const rows = 5;
     const letterElements = [];
 
     let itemIndex = 0;
@@ -95,7 +120,7 @@ const EnglishCoffeeBackground = ({ children }) => {
       {/* Контент користувача */}
       <div className="relative z-10">{children}</div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float-fade {
           0% {
             transform: translateY(0) rotate(0deg);

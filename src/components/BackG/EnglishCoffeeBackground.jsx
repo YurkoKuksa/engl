@@ -73,7 +73,7 @@ const EnglishCoffeeBackground = ({ children }) => {
       {/* Контент користувача */}
       <div className="relative z-10">{children}</div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float-fade {
           0% {
             transform: translateY(0) rotate(0deg);
