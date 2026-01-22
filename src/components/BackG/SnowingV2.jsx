@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Snowing = ({ children }) => {
   const [snowflakes, setSnowflakes] = useState([]);
@@ -18,7 +18,7 @@ const Snowing = ({ children }) => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-900 via-blue-900 to-slate-800">
       {/* Сніжинки */}
-      {snowflakes.map(flake => (
+      {snowflakes.map((flake) => (
         <div
           key={flake.id}
           className="fixed animate-fall pointer-events-none z-0 text-blue-200"
@@ -28,8 +28,8 @@ const Snowing = ({ children }) => {
             animationDelay: `${flake.animationDelay}s`,
             fontSize: `${flake.size}px`,
             opacity: flake.opacity,
-            top: '-5%',
-            filter: 'drop-shadow(0 0 3px #7dd3fc)',
+            top: "-5%",
+            filter: "drop-shadow(0 0 3px #7dd3fc)",
           }}
         >
           ❄
@@ -39,7 +39,7 @@ const Snowing = ({ children }) => {
       {/* Контент */}
       <div className="relative z-10">{children}</div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fall {
           0% {
             transform: translateY(0) rotate(0deg);
