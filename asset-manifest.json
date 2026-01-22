@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/engl/static/css/main.03714a56.css",
-    "main.js": "/engl/static/js/main.2eda71da.js",
+    "main.css": "/engl/static/css/main.2e311581.css",
+    "main.js": "/engl/static/js/main.e83edcc8.js",
     "static/media/china.jpg": "/engl/static/media/china.23632a4c68793bd8bfcb.jpg",
     "static/media/dacapo1.jpg": "/engl/static/media/dacapo1.5872a67db290e8fbe120.jpg",
     "static/media/2.png": "/engl/static/media/2.c8eebeff5a8f8045750f.png",
@@ -29,11 +29,11 @@
     "static/media/kahoot.svg": "/engl/static/media/kahoot.ea1134ae493f10cd1139e93300aab9a2.svg",
     "static/media/download.svg": "/engl/static/media/download.63fc05589cda0aa27aacbb88df8071aa.svg",
     "static/media/double_arrow_up.svg": "/engl/static/media/double_arrow_up.b5d00926162fa68a1db33ef1a5bd0806.svg",
-    "main.03714a56.css.map": "/engl/static/css/main.03714a56.css.map",
-    "main.2eda71da.js.map": "/engl/static/js/main.2eda71da.js.map"
+    "main.2e311581.css.map": "/engl/static/css/main.2e311581.css.map",
+    "main.e83edcc8.js.map": "/engl/static/js/main.e83edcc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.03714a56.css",
-    "static/js/main.2eda71da.js"
+    "static/css/main.2e311581.css",
+    "static/js/main.e83edcc8.js"
   ]
 }
