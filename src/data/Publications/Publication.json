@@ -25,5 +25,18 @@
     "tags": ["Beta Gen", "AGI", "AI"],
     "readingTime": "",
     "author": "Yurko Kuksa"
+  },
+  {
+    "id": "art-002",
+    "slug": "polgar",
+    "content": "polgar",
+    "type": "article",
+    "title": "The Polgár Principles: Raising a Genius",
+    "coverImg": "/img/BlogImg/polgar.jpg",
+    "date": "2026-01-23",
+    "description": "The main principles and approaches to raising a genius, outlined in the work of László Polgár, which I have identified for myself.",
+    "tags": ["Laszlo Polgar", "Genius"],
+    "readingTime": "",
+    "author": "Yurko Kuksa"
   }
 ]
