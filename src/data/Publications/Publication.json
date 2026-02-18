@@ -1,8 +1,8 @@
 [
   {
     "id": "yt-001",
-    "slug": "esl-mistakes",
-    "content": "esl-mistakes",
+    "slug": "basic-birds",
+    "content": "basic-birds",
     "type": "youtube",
     "title": "Learn Birds 🐦 | Easy Vocabulary for Beginners",
     "coverImg": "/img/BlogImg/basic_birds.jpg",
@@ -11,7 +11,7 @@
     "tags": ["Birds", "Basic", "Beginner"],
     "youtubeId": "3h4Kan4Kpc8",
     "duration": "3:44",
-    "author": "Yurko Kuksa"
+    "author": "Yuri Kuksa"
   },
   {
     "id": "art-001",
@@ -24,7 +24,7 @@
     "description": "How Generation Beta will grow up with AI, the future of education, and the role of intelligent systems.",
     "tags": ["Beta Gen", "AGI", "AI"],
     "readingTime": "",
-    "author": "Yurko Kuksa"
+    "author": "Yuri Kuksa"
   },
   {
     "id": "art-002",
@@ -37,6 +37,47 @@
     "description": "The main principles and approaches to raising a genius, outlined in the work of László Polgár, which I have identified for myself.",
     "tags": ["Laszlo Polgar", "Genius"],
     "readingTime": "",
-    "author": "Yurko Kuksa"
+    "author": "Yuri Kuksa"
+  },
+  {
+    "id": "yt-002",
+    "slug": "songbirds",
+    "content": "songbirds",
+    "type": "youtube",
+    "title": "12 English Bird Names You Should Know | Songbirds Vocabulary",
+    "coverImg": "/img/BlogImg/songbirds.jpg",
+    "date": "2026-02-02",
+    "description": "In this video, you will learn basic English vocabulary related to the topic \"Songbirds\"",
+    "tags": ["songbirds", "birds"],
+    "youtubeId": "PaRGqeWhnTA",
+    "duration": "5:47",
+    "author": "Yuri Kuksa"
+  },
+  {
+    "id": "yt-003",
+    "slug": "comingover",
+    "content": "comingover",
+    "type": "youtube",
+    "title": "Coming over, Swing by та Come by! | American English",
+    "coverImg": "/img/BlogImg/comeover.jpg",
+    "date": "2026-02-18",
+    "description": "Learn how to use common phrases for visiting friends. Easy examples and tips to sound natural in American English.",
+    "tags": ["coming over", "come by", "swing by"],
+    "youtubeId": "yNiEpTdeUQk",
+    "duration": "11:19",
+    "author": "Yuri Kuksa"
+  },
+  {
+    "id": "art-003",
+    "slug": "ukredu",
+    "content": "ukredu",
+    "type": "article",
+    "title": "Education Under Fire: \n Ukraine's Struggle and Hope",
+    "coverImg": "/img/BlogImg/ukr_edu.jpg",
+    "date": "2026-02-18",
+    "description": "Ukrainian education is facing a deep crisis, with teachers struggling under low salaries and the added challenges of war. This article highlights the vital role of education in shaping Ukraine's future and preserving its values.",
+    "tags": ["Ukrainian Schools", "Pedagogy"],
+    "readingTime": "",
+    "author": "Yuri Kuksa"
   }
 ]
