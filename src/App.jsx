@@ -24,7 +24,7 @@ function App() {
           <Route path="c2" element={<UnderConstruction />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />
-        </Route>{" "}
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

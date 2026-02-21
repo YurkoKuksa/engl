@@ -6,7 +6,7 @@ import AvatarMobil from "../../../assets/img/forMobil.png";
 import EnglTeach from "../../../assets/img/englTeach.png";
 import EnglTeachDarkMode from "../../../assets/img/englTeachDarkMode.png";
 
-import resume_pdf from "../../../assets/pdf/ESL-teacher-2025.pdf";
+import resume_pdf from "../../../assets/pdf/ESL-teacher-2026.pdf";
 import download from "../../../assets/svg/download.svg";
 // import HeroAnimation from "../../../components/HeroAnimation/TeacherHeroAnimation";
 
