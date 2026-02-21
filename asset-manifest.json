@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/engl/static/css/main.4d2970d8.css",
-    "main.js": "/engl/static/js/main.d9be342c.js",
+    "main.js": "/engl/static/js/main.645cb59c.js",
     "static/media/china.jpg": "/engl/static/media/china.23632a4c68793bd8bfcb.jpg",
     "static/media/dacapo1.jpg": "/engl/static/media/dacapo1.5872a67db290e8fbe120.jpg",
     "static/media/2.png": "/engl/static/media/2.c8eebeff5a8f8045750f.png",
@@ -10,8 +10,8 @@
     "static/media/sintJan1.jpg": "/engl/static/media/sintJan1.e98fd31bfc3380b8ead0.jpg",
     "static/media/journaal.jpg": "/engl/static/media/journaal.5fe559b703e3afddc7b1.jpg",
     "static/media/engl-tch-3 - Copy.png": "/engl/static/media/engl-tch-3 - Copy.cb7f0ee0e9dd28e95c2b.png",
+    "static/media/ESL-teacher-2026.pdf": "/engl/static/media/ESL-teacher-2026.f455550b91de836aa1be.pdf",
     "static/media/1.jpg": "/engl/static/media/1.731ff6f81b00e0e657b3.jpg",
-    "static/media/ESL-teacher-2025.pdf": "/engl/static/media/ESL-teacher-2025.9a170e0c7006a1c87642.pdf",
     "static/media/sinJan2.jpg": "/engl/static/media/sinJan2.b3c95ea672ae4b708f5b.jpg",
     "static/media/say1.jpg": "/engl/static/media/say1.d69c3075985528c9a18d.jpg",
     "static/media/forMobil.png": "/engl/static/media/forMobil.3884ea8c3f6b583be364.png",
@@ -30,10 +30,10 @@
     "static/media/download.svg": "/engl/static/media/download.63fc05589cda0aa27aacbb88df8071aa.svg",
     "static/media/double_arrow_up.svg": "/engl/static/media/double_arrow_up.b5d00926162fa68a1db33ef1a5bd0806.svg",
     "main.4d2970d8.css.map": "/engl/static/css/main.4d2970d8.css.map",
-    "main.d9be342c.js.map": "/engl/static/js/main.d9be342c.js.map"
+    "main.645cb59c.js.map": "/engl/static/js/main.645cb59c.js.map"
   },
   "entrypoints": [
     "static/css/main.4d2970d8.css",
-    "static/js/main.d9be342c.js"
+    "static/js/main.645cb59c.js"
   ]
 }
