@@ -1,5 +1,20 @@
 [
   {
+    "id": "yt-004",
+    "slug": "easter",
+    "content": "easter",
+    "type": "youtube",
+    "title": "How to Talk About Easter in English",
+    "coverImg": "/img/BlogImg/easter.jpeg",
+    "date": "2026-03-28",
+    "description": "Learn Easter vocabulary in English in a simple and fun way! 🐰🥚",
+    "tags": ["easter", "bunny", "eggs"],
+    "youtubeId": "f__BtY0X2ds",
+    "duration": "6:35",
+    "author": "Yuri Kuksa"
+  },
+
+  {
     "id": "yt-001",
     "slug": "basic-birds",
     "content": "basic-birds",
@@ -68,7 +83,7 @@
     "author": "Yuri Kuksa"
   },
   {
-    "id": "art-003",
+    "id": "yt-004",
     "slug": "ukredu",
     "content": "ukredu",
     "type": "article",
