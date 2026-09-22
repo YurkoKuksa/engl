@@ -18,6 +18,7 @@ export const tokens = {
   text: "#202B36",
   muted: "#5B6B7A",
   border: "#E2E6EA",
+  // border: "#4a5b60",
   onDark: "#EAF0F4",
   onDarkMuted: "#9FB3C4",
 
@@ -88,27 +89,50 @@ export const GlobalStyle = createGlobalStyle`
       size: A4;
       margin: 10mm 12mm;
     }
+
+    a, a:visited {
+      color: inherit !important;
+      text-decoration: underline !important; /* Вкрай важливо для парсера PDF */
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* 2. Запобігаємо згортанню контейнерів, у яких лежать посилання */
+    li a {
+      display: inline !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
   }
 `;
 
 /* ───────────────────── TOP BAR ───────────────────── */
 
 export const TopBar = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 20;
+  left: 0; /* Прикріплюємо до лівого краю */
+  right: 0; /* Прикріплюємо до правого краю, щоб растягнути на всю ширину */
+  width: 100%; /* Гарантує повну ширину */
+  z-index: 20; /* Піднімаємо z-index, щоб панель була поверх усіх елементів */
+
+  /* z-index: 20; */
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 12px;
   padding: 14px 24px;
   background: ${tokens.panel};
-  border-bottom: 1px solid ${tokens.border};
+  border-bottom: 1px solid #34454a;
   box-shadow: 0 2px 10px rgba(19, 41, 61, 0.05);
 
   @media (max-width: 640px) {
-    grid-template-columns: auto 1fr;
-    padding: 12px 16px;
+    /* grid-template-columns: auto 1fr;
+    padding: 12px 16px; */
+
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 60px 10px 12px; /* Додаємо 60px відступу справа (padding-right), щоб не налізати на бургер-меню */
+    gap: 8px;
 
     > *:last-child {
       display: none;
@@ -148,6 +172,13 @@ export const BackButton = styled.button`
     width: 16px;
     height: 16px;
   }
+
+  @media (max-width: 640px) {
+    span {
+      display: none;
+    }
+    padding: 8px;
+  }
 `;
 
 export const PrintButton = styled.button`
@@ -186,13 +217,23 @@ export const PrintButton = styled.button`
     height: 16px;
     color: ${tokens.accent};
   }
+
+  @media (max-width: 640px) {
+    justify-self: center;
+    padding: 8px 12px;
+    font-size: 13px;
+
+    /* Якщо хочете залишити ТІЛЬКИ іконку принтера на мобільних: */
+    /* span { display: none; } */
+    /* padding: 8px; */
+  }
 `;
 
 /* ───────────────────── PAGE LAYOUT ───────────────────── */
 
 export const PageWrapper = styled.main`
   max-width: 1040px;
-  margin: 32px auto 64px;
+  margin: 90px auto 64px;
   background: ${tokens.paper};
   border-radius: 14px;
   overflow: hidden;
@@ -202,7 +243,7 @@ export const PageWrapper = styled.main`
 
   @media (max-width: 820px) {
     grid-template-columns: 1fr;
-    margin: 0;
+    margin: 55px 0 0;
     border-radius: 0;
     box-shadow: none;
   }

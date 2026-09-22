@@ -13,6 +13,21 @@ export const resumeData = {
     },
   },
 
+  resources: [
+    {
+      name: "Teachers Pay Teachers",
+      url: "https://www.teacherspayteachers.com/store/apexfluentacademy",
+    },
+    {
+      name: "YouTube Channel",
+      url: "https://www.youtube.com/channel/UC84CYmL9e0_F5zyDFxJhTqw",
+    },
+    {
+      name: "Kahoot Profile",
+      url: "https://create.kahoot.it/profiles/3b1e808e-d78f-4971-9343-18e15b21ac9b",
+    },
+  ],
+
   areasOfExpertise: [
     "English as a Second Language (ESL)",
     "Elementary",
@@ -20,15 +35,28 @@ export const resumeData = {
     "Intermediate",
   ],
 
+  // hardSkills: [
+  //   "Cross-cultural communication",
+  //   "Lesson planning and curriculum development",
+  //   "ESL/EFL methodologies and best practices",
+  //   "Proficient in using educational technologies",
+  //   "Parent-teacher communication",
+  // ],
+
   hardSkills: [
-    "Cross-cultural communication",
-    "Lesson planning and curriculum development",
-    "ESL/EFL methodologies and best practices",
-    "Proficient in using educational technologies",
-    "Parent-teacher communication",
+    "Lesson Planning & Curriculum",
+    "ESL / EFL Methodologies",
+    "Educational Technology (EdTech)",
+    "Parent-Teacher Communication",
+    "Cross-Cultural Communication",
   ],
 
-  softSkills: ["Teamwork", "Active listening", "Critical thinking", "Determined"],
+  softSkills: [
+    "Teamwork",
+    "Active listening",
+    "Critical thinking",
+    "Determined",
+  ],
 
   languages: [
     { name: "Dutch", level: "Pre-Intermediate" },
@@ -41,10 +69,10 @@ export const resumeData = {
       id: 1,
       role: "ESL Teacher",
       period: "Oct 2022 – July 2023",
-      company: "LVO",
+      company: "LVO | Netherlands",
       details: [
-        "EOA foreign classes in the school 'DaCapo College'",
-        "ISK Ukrainian group in the school 'Groenewald'",
+        { text: "EOA foreign classes at ", school: "DaCapo College" },
+        { text: "ISK Ukrainian class at ", school: "Groenewald" },
       ],
       achievements: [
         "Improved the efficiency of educational process management through the implementation of new interactive technologies.",
@@ -54,8 +82,8 @@ export const resumeData = {
       id: 2,
       role: "ESL Teacher",
       period: "May 2022 – July 2022",
-      company: "LVO",
-      details: ["ISK Ukrainian group in the school 'SintJan College'"],
+      company: "LVO | Netherlands",
+      details: [{ text: "ISK Ukrainian class at ", school: "SintJan College" }],
       achievements: [
         "Successfully supported Ukrainian children in their initial adaptation to a foreign-language environment, fostering a comfortable and inclusive learning atmosphere.",
       ],
@@ -64,8 +92,13 @@ export const resumeData = {
       id: 3,
       role: "ESL Teacher",
       period: "Sep 2021 – Jan 2022",
-      company: "General secondary school in Ukraine",
-      details: ["Ukrainian public primary and secondary schools 'Slobodishche'"],
+      company: "Shvaykivka Education Department | Ukraine",
+      details: [
+        {
+          text: "Public primary & secondary school at ",
+          school: "Slobodishche",
+        },
+      ],
       achievements: [
         "Built a strong communication with both students and teachers, fostering a positive and collaborative environment.",
       ],

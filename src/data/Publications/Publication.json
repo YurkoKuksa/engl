@@ -1,5 +1,20 @@
 [
   {
+    "id": "yt-005",
+    "slug": "unlearned",
+    "content": "unlearned",
+    "type": "youtube",
+    "title": "Learned & Unlearned: How to Say It in English",
+    "coverImg": "/img/BlogImg/learn.jpeg",
+    "date": "2026-06-28",
+    "description": "how to naturally say \"learned — unlearned\" and \"used to — broke the habit\" in English with real-life examples",
+    "tags": ["learn", "used to", "practice"],
+    "youtubeId": "axmZcrS__ss",
+    "duration": "3:00",
+    "author": "Yuri Kuksa"
+  },
+
+  {
     "id": "yt-004",
     "slug": "easter",
     "content": "easter",

@@ -44,6 +44,7 @@ const Resume = ({ onBack }) => {
     languages,
     workExperience,
     education,
+    resources,
   } = resumeData;
 
   const handleBack = () => {
@@ -153,7 +154,11 @@ const Resume = ({ onBack }) => {
       <GlobalStyle />
 
       <TopBar className="no-print">
-        <BackButton type="button" onClick={handleBack}>
+        <BackButton
+          type="button"
+          onClick={handleBack}
+          aria-label="Back to Main"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -166,7 +171,7 @@ const Resume = ({ onBack }) => {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Main
+          <span>Back to Main</span>
         </BackButton>
 
         <PrintButton type="button" onClick={handleSaveAsPdf}>
@@ -277,6 +282,43 @@ const Resume = ({ onBack }) => {
             </ContactList>
           </SidebarSection>
 
+          {/* ───────────────────── НОВИЙ БЛОК RESOURCES ───────────────────── */}
+          {resources && resources.length > 0 && (
+            <SidebarSection>
+              <h3>Resources</h3>
+              <ContactList>
+                {resources.map((item) => (
+                  <li key={item.name}>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ContactList>
+            </SidebarSection>
+          )}
+
           <SidebarSection>
             <h3>Skills</h3>
             <TagList>
@@ -355,8 +397,16 @@ const Resume = ({ onBack }) => {
                   </div>
                   <p className="company">{job.company}</p>
                   <ul>
-                    {job.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
+                    {job.details.map((detail, index) => (
+                      <li key={index}>
+                        {typeof detail === "object" ? (
+                          <>
+                            {detail.text} <strong>{detail.school}</strong>
+                          </>
+                        ) : (
+                          detail
+                        )}
+                      </li>
                     ))}
                   </ul>
                   {job.achievements.map((achievement) => (
