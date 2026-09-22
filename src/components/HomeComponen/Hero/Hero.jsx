@@ -9,6 +9,7 @@ import EnglTeachDarkMode from "../../../assets/img/englTeachDarkMode.png";
 import resume_pdf from "../../../assets/pdf/ESL-teacher-2026.pdf";
 import download from "../../../assets/svg/download.svg";
 // import HeroAnimation from "../../../components/HeroAnimation/TeacherHeroAnimation";
+import LinksSet from "../../../data/IconLinks/IconLinks";
 
 import {
   AvatarDeskTop,
@@ -29,12 +30,18 @@ import {
   Typing,
 } from "./Home.Styled";
 import { useTypewriterEffect } from "../../../hooks/useTypewriterEffect";
-
-import LinksSet from "../../../data/IconLinks/IconLinks";
+import { Link } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 AOS.init();
 const Hero = ({ theme }) => {
   const displayText = useTypewriterEffect();
+
+  const navigate = useNavigate();
+  const handleOpenResumeAndPrint = () => {
+    navigate("/resume?print=true");
+  };
+
   return (
     <MainBox style={{ position: "relative" }}>
       <ScrollSpot id="scroll-section"> </ScrollSpot>
@@ -68,7 +75,7 @@ const Hero = ({ theme }) => {
         <Cursor>|</Cursor>
       </Typing>
 
-      <DownloadContainer>
+      {/* <DownloadContainer>
         <DownlResume>Download Resume</DownlResume>
         <DownLoading
           href={resume_pdf}
@@ -76,6 +83,17 @@ const Hero = ({ theme }) => {
           rel="noopener noreferrer"
         >
           <DownloadFile src={download} alt="завантажити" $theme={theme} />
+        </DownLoading>
+      </DownloadContainer> */}
+
+      <DownloadContainer>
+        <DownlResume>Download Resume</DownlResume>
+
+        <DownLoading
+          onClick={handleOpenResumeAndPrint}
+          style={{ cursor: "pointer" }}
+        >
+          <DownloadFile src={download} alt="відкрити резюме" $theme={theme} />
         </DownLoading>
       </DownloadContainer>
 

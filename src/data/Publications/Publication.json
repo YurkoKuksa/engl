@@ -81,18 +81,5 @@
     "youtubeId": "yNiEpTdeUQk",
     "duration": "11:19",
     "author": "Yuri Kuksa"
-  },
-  {
-    "id": "yt-004",
-    "slug": "ukredu",
-    "content": "ukredu",
-    "type": "article",
-    "title": "Education Under Fire: \n Ukraine's Struggle and Hope",
-    "coverImg": "/img/BlogImg/ukr_edu.jpg",
-    "date": "2026-02-18",
-    "description": "Ukrainian education is facing a deep crisis, with teachers struggling under low salaries and the added challenges of war. This article highlights the vital role of education in shaping Ukraine's future and preserving its values.",
-    "tags": ["Ukrainian Schools", "Pedagogy"],
-    "readingTime": "",
-    "author": "Yuri Kuksa"
   }
 ]

@@ -5,6 +5,7 @@ import linkedIn from "../../assets/svg/linkedin.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
 import mail from "../../assets/svg/gmail.svg";
 import phone1 from "../../assets/svg/phone1.svg";
+import tpt from "../../assets/svg/tpt.svg";
 
 import {
   KahootBox,
@@ -14,6 +15,12 @@ import {
 } from "../../components/HomeComponen/Hero/Home.Styled";
 
 const IconLinksSet = [
+  {
+    href: "https://www.teacherspayteachers.com/store/apexfluentacademy",
+    alt: "teachers pay teachers website",
+    img: tpt,
+    ImgComponent: LongSvg,
+  },
   {
     href: "https://create.kahoot.it/profiles/3b1e808e-d78f-4971-9343-18e15b21ac9b",
     alt: "kahoot",

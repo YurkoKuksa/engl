@@ -9,6 +9,7 @@ import UnderConstruction from "./pages/DefaultPages/UnderConstructionPage/UnderC
 import PublicationMenu from "./pages/Publications/PublicationMenu/Publ";
 import Content from "./pages/Publications/PublicationPage/PublicationPage";
 import NotFound from "./pages/DefaultPages/NotFoundPage/NotFound1";
+import Resume from "./pages/Resume/Resume";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="publications" element={<PublicationMenu />} />
           <Route path="publications/:slug" element={<Content />} />
 
-          <Route path="c2" element={<UnderConstruction />} />
+          <Route path="resume" element={<Resume />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />
         </Route>
