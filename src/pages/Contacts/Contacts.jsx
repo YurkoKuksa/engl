@@ -53,23 +53,12 @@ const Contacts = () => {
     return lastSubmit === getTodayKey();
   };
 
-  // useEffect(() => {
-  //   setAlreadySentToday(checkAlreadySentToday());
-  // }, []);
-
-  // useEffect(() => {
-  //   const lastSubmit = localStorage.getItem(LAST_SUBMIT_KEY);
-  //   setAlreadySentToday(lastSubmit === getTodayKey());
-  // }, []);
-
   useEffect(() => {
     const now = new Date();
     const todayKey = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
     const lastSubmit = localStorage.getItem(LAST_SUBMIT_KEY);
     setAlreadySentToday(lastSubmit === todayKey);
   }, []);
-
-  // =====  РЕШТА КОДУ  ========
 
   const validateEmail = (email) => {
     const hasAt = email.includes("@");
@@ -181,9 +170,6 @@ const Contacts = () => {
             </IntroText> */}
           </HeaderSection>
 
-          {/* ================================================== */}
-
-          {/* ================================================= */}
           {submitted ? (
             <SuccessMessage>
               ✨ Thank you for reaching out! I'll get back to you soon.
@@ -254,11 +240,8 @@ const Contacts = () => {
               >
                 {loading ? "Sending..." : "Send Message"}
               </SubmitButton>
-              {/* КІНЕЦЬ ПРАПОРЦЯ */}
 
-              {/* <SubmitButton type="submit" disabled={loading || !message.trim()}>
-                {loading ? "Sending..." : "Send Message"}
-              </SubmitButton> */}
+              {/* КІНЕЦЬ ПРАПОРЦЯ */}
             </ContactForm>
           )}
 

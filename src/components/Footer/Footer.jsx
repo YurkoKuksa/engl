@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   ContactBox,
@@ -20,9 +20,14 @@ import {
   SubmitButton,
   SuccessMessage,
   Textarea,
+  WarningMessage,
+  TermsNote,
+  TermsLink,
 } from "./FooterStyled";
 
 import LinksSet from "../../data/IconLinks/IconLinks";
+
+const FEEDBACK_LAST_SUBMIT_KEY = "feedbackForm_lastSubmit";
 
 const Footer = () => {
   const [rating, setRating] = useState(0);
@@ -32,6 +37,24 @@ const Footer = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const [alreadySentToday, setAlreadySentToday] = useState(false);
+
+  const getTodayKey = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+  };
+
+  const checkAlreadySentToday = () => {
+    const lastSubmit = localStorage.getItem(FEEDBACK_LAST_SUBMIT_KEY);
+    return lastSubmit === getTodayKey();
+  };
+
+  useEffect(() => {
+    const lastSubmit = localStorage.getItem(FEEDBACK_LAST_SUBMIT_KEY);
+    const now = new Date();
+    const todayKey = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+    setAlreadySentToday(lastSubmit === todayKey);
+  }, []);
 
   const validateEmail = (email) => {
     const hasAt = email.includes("@");
@@ -42,6 +65,11 @@ const Footer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (checkAlreadySentToday()) {
+      setAlreadySentToday(true);
+      return;
+    }
 
     if (!email.trim()) {
       setEmailError(" Email is required");
@@ -73,6 +101,8 @@ const Footer = () => {
         mode: "no-cors",
       });
 
+      localStorage.setItem(FEEDBACK_LAST_SUBMIT_KEY, getTodayKey());
+      setAlreadySentToday(true);
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
@@ -95,6 +125,11 @@ const Footer = () => {
           <SectionTitle>Your Feedback</SectionTitle>
           {submitted ? (
             <SuccessMessage>Thank you for your feedback! ✨</SuccessMessage>
+          ) : alreadySentToday ? (
+            <WarningMessage>
+              ⏳ You've already sent feedback today. Please come back tomorrow —
+              thank you for your understanding!
+            </WarningMessage>
           ) : (
             <FeedbackForm onSubmit={handleSubmit}>
               <div>
@@ -143,6 +178,18 @@ const Footer = () => {
               <SubmitButton type="submit" disabled={loading || rating === 0}>
                 {loading ? "Sending..." : "Send Feedback"}
               </SubmitButton>
+
+              <TermsNote>
+                By sending feedback you agree to the{" "}
+                <TermsLink
+                  to="/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms of Use & Privacy Policy
+                </TermsLink>
+                .
+              </TermsNote>
             </FeedbackForm>
           )}
         </FeedbackSection>
@@ -205,6 +252,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// 1FAIpQLScWa0-t9k9R2_ILYA48ytgnBBIEMlKZOYP450DURhuofW9wOQ
-// entry.378524996

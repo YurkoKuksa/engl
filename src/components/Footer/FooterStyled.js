@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const MainFooterBox = styled.div`
   padding: 80px 15px;
@@ -246,5 +247,33 @@ export const LocationLink = styled.a`
   &:hover {
     color: #fff;
     transform: scale(1.02);
+  }
+`;
+
+export const WarningMessage = styled.div`
+  padding: 16px 20px;
+  background: rgba(255, 202, 40, 0.15);
+  border: 1px solid rgba(255, 202, 40, 0.5);
+  color: #ffe082;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+`;
+
+export const TermsNote = styled.p`
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: -8px 0 0 0;
+  line-height: 1.5;
+`;
+
+export const TermsLink = styled(Link)`
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+
+  &:hover {
+    color: #fff;
   }
 `;
