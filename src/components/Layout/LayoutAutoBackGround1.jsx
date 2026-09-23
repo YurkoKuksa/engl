@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 
 import backgrounds from "../../data/BackGround/BackGroundsList";
 import specialDates from "../../data/BackGround/SpacialDates";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 const Layout = () => {
   const isDateInRange = (month, day, from, to) => {
@@ -57,6 +58,7 @@ const Layout = () => {
   return (
     <>
       <BackgroundComponent>
+        <ScrollToTop />
         <Header theme={theme} />
         <TextStyle $theme={theme}>
           <Suspense fallback={<div>Loading...</div>}>

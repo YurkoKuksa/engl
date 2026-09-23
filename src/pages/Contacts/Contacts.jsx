@@ -22,6 +22,10 @@ import {
   Subtitle,
   SuccessMessage,
   Textarea,
+  AgreementGroup,
+  AgreementCheckbox,
+  AgreementLabel,
+  AgreementLink,
 } from "./Contacts.Styled";
 
 const Contacts = () => {
@@ -29,9 +33,13 @@ const Contacts = () => {
 
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
+
+  const [agreed, setAgreed] = useState(false);
+  const [agreedError, setAgreedError] = useState("");
 
   const validateEmail = (email) => {
     const hasAt = email.includes("@");
@@ -54,15 +62,39 @@ const Contacts = () => {
     }
 
     setEmailError("");
+
+    // ПРАПОРЕЦЬ
+    if (!email.trim()) {
+      setEmailError("Email is required");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email (must contain @ and a dot)");
+      return;
+    }
+
+    if (!agreed) {
+      setAgreedError("You must agree to the terms before sending");
+      return;
+    }
+
+    setEmailError("");
+    setAgreedError("");
+
+    // КІНЕЦЬ ПЕРЕВІРКИ
+
     setLoading(true);
 
     const FORM_ID = "1FAIpQLSc81dEfGhKr6j63x3k4JWIfM01aJaOahWpQygyXepK9cr3aaQ";
     const ENTRY_EMAIL = "entry.1977140610";
     const ENTRY_MESSAGE = "entry.1827328685";
+    const ENTRY_AGREEMENT = "entry.694234832"; // встав знайдений ID
 
     const formData = new URLSearchParams();
     formData.append(ENTRY_EMAIL, email);
     formData.append(ENTRY_MESSAGE, message);
+    formData.append(ENTRY_AGREEMENT, "Yes"); // значення опції чекбокса
 
     try {
       await fetch(`https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`, {
@@ -139,9 +171,42 @@ const Contacts = () => {
                 />
               </InputGroup>
 
-              <SubmitButton type="submit" disabled={loading || !message.trim()}>
+              {/* ПРАПОРЕЦЬ */}
+
+              <AgreementGroup>
+                <AgreementCheckbox
+                  id="agreement"
+                  checked={agreed}
+                  onChange={(e) => {
+                    setAgreed(e.target.checked);
+                    if (e.target.checked) setAgreedError("");
+                  }}
+                />
+                <AgreementLabel htmlFor="agreement">
+                  I agree to the
+                  <AgreementLink
+                    to="/terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Terms of Use and Privacy Policy
+                  </AgreementLink>
+                  <Required>*</Required>
+                </AgreementLabel>
+              </AgreementGroup>
+              {agreedError && <ErrorText>⚠ {agreedError}</ErrorText>}
+
+              <SubmitButton
+                type="submit"
+                disabled={loading || !message.trim() || !agreed}
+              >
                 {loading ? "Sending..." : "Send Message"}
               </SubmitButton>
+              {/* КІНЕЦЬ ПРАПОРЦЯ */}
+
+              {/* <SubmitButton type="submit" disabled={loading || !message.trim()}>
+                {loading ? "Sending..." : "Send Message"}
+              </SubmitButton> */}
             </ContactForm>
           )}
 

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const PageContainer = styled.div`
   min-height: 100vh;
@@ -144,7 +145,7 @@ export const Textarea = styled.textarea`
   background: #f8f9fa;
   color: #2c3e50;
   font-size: 16px;
-  min-height: 150px;
+  min-height: 120px; /* було 150px */
   resize: vertical;
   font-family: inherit;
   transition: all 0.3s;
@@ -269,5 +270,41 @@ export const ContactIcons = styled.ul`
     &:hover {
       box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
     }
+  }
+`;
+
+// Форма згоди
+
+export const AgreementGroup = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -5px;
+`;
+
+export const AgreementCheckbox = styled.input.attrs({ type: "checkbox" })`
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 2px;
+  accent-color: #3498db;
+  cursor: pointer;
+  border-radius: 4px;
+`;
+
+export const AgreementLabel = styled.label`
+  font-size: 14px;
+  line-height: 1.4;
+  color: #5a6b70;
+  cursor: pointer;
+`;
+
+export const AgreementLink = styled(Link)`
+  color: #3498db;
+  text-decoration: underline;
+  font-weight: 600;
+
+  &:hover {
+    color: #2980b9;
   }
 `;

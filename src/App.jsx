@@ -10,6 +10,7 @@ import PublicationMenu from "./pages/Publications/PublicationMenu/Publ";
 import Content from "./pages/Publications/PublicationPage/PublicationPage";
 import NotFound from "./pages/DefaultPages/NotFoundPage/NotFound1";
 import Resume from "./pages/Resume/Resume";
+import Terms from "./pages/Terms/Terms";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="sources" element={<Sources />} />
           <Route path="contacts" element={<Contacts />} />
+          <Route path="terms" element={<Terms />} />
           <Route path="publications" element={<PublicationMenu />} />
           <Route path="publications/:slug" element={<Content />} />
 
