@@ -53,8 +53,20 @@ const Contacts = () => {
     return lastSubmit === getTodayKey();
   };
 
+  // useEffect(() => {
+  //   setAlreadySentToday(checkAlreadySentToday());
+  // }, []);
+
+  // useEffect(() => {
+  //   const lastSubmit = localStorage.getItem(LAST_SUBMIT_KEY);
+  //   setAlreadySentToday(lastSubmit === getTodayKey());
+  // }, []);
+
   useEffect(() => {
-    setAlreadySentToday(checkAlreadySentToday());
+    const now = new Date();
+    const todayKey = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+    const lastSubmit = localStorage.getItem(LAST_SUBMIT_KEY);
+    setAlreadySentToday(lastSubmit === todayKey);
   }, []);
 
   // =====  РЕШТА КОДУ  ========
