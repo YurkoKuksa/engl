@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 import LinksSet from "../../data/IconLinks/IconLinks";
@@ -26,20 +26,38 @@ import {
   AgreementCheckbox,
   AgreementLabel,
   AgreementLink,
+  WarningMessage,
 } from "./Contacts.Styled";
 
 const Contacts = () => {
   const { theme } = useOutletContext();
 
+  const LAST_SUBMIT_KEY = "contactForm_lastSubmit";
+
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
-
   const [agreed, setAgreed] = useState(false);
   const [agreedError, setAgreedError] = useState("");
+  const [alreadySentToday, setAlreadySentToday] = useState(false);
+
+  const getTodayKey = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+  };
+
+  const checkAlreadySentToday = () => {
+    const lastSubmit = localStorage.getItem(LAST_SUBMIT_KEY);
+    return lastSubmit === getTodayKey();
+  };
+
+  useEffect(() => {
+    setAlreadySentToday(checkAlreadySentToday());
+  }, []);
+
+  // =====  РЕШТА КОДУ  ========
 
   const validateEmail = (email) => {
     const hasAt = email.includes("@");
@@ -51,6 +69,11 @@ const Contacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (checkAlreadySentToday()) {
+      setAlreadySentToday(true);
+      return;
+    }
+
     if (!email.trim()) {
       setEmailError("Email is required");
       return;
@@ -61,7 +84,14 @@ const Contacts = () => {
       return;
     }
 
+    if (!agreed) {
+      setAgreedError("You must agree to the terms before sending");
+      return;
+    }
+
     setEmailError("");
+    setAgreedError("");
+    setLoading(true);
 
     // ПРАПОРЕЦЬ
     if (!email.trim()) {
@@ -103,6 +133,8 @@ const Contacts = () => {
         mode: "no-cors",
       });
 
+      localStorage.setItem(LAST_SUBMIT_KEY, getTodayKey());
+      setAlreadySentToday(true);
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
@@ -137,10 +169,18 @@ const Contacts = () => {
             </IntroText> */}
           </HeaderSection>
 
+          {/* ================================================== */}
+
+          {/* ================================================= */}
           {submitted ? (
             <SuccessMessage>
               ✨ Thank you for reaching out! I'll get back to you soon.
             </SuccessMessage>
+          ) : alreadySentToday ? (
+            <WarningMessage>
+              ⏳ You've already sent a message today. Please wait until tomorrow
+              to send another one — this helps me keep replies manageable.
+            </WarningMessage>
           ) : (
             <ContactForm onSubmit={handleSubmit}>
               <FormTitle>Send Me a Message</FormTitle>

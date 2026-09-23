@@ -308,3 +308,14 @@ export const AgreementLink = styled(Link)`
     color: #2980b9;
   }
 `;
+
+export const WarningMessage = styled.div`
+  padding: 16px 20px;
+  background: #fff8e1;
+  border: 1px solid #ffca28;
+  color: #8a6100;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+`;
