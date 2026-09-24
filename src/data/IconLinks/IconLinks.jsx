@@ -4,7 +4,7 @@ import telegram from "../../assets/svg/telegram.svg";
 import linkedIn from "../../assets/svg/linkedin.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
 import mail from "../../assets/svg/gmail.svg";
-import phone1 from "../../assets/svg/phone1.svg";
+// import phone1 from "../../assets/svg/phone1.svg";
 import tpt from "../../assets/svg/tpt.svg";
 
 import {
@@ -58,12 +58,12 @@ const IconLinksSet = [
     img: mail,
     ImgComponent: LongSvg,
   },
-  {
-    href: "tel:+31616319115",
-    alt: "phone1",
-    img: phone1,
-    ImgComponent: SvgItm,
-  },
+  // {
+  //   href: "tel:+31616319115",
+  //   alt: "phone1",
+  //   img: phone1,
+  //   ImgComponent: SvgItm,
+  // },
 ];
 
 export default IconLinksSet;
