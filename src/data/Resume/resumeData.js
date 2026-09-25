@@ -2,6 +2,7 @@ export const resumeData = {
   personalInfo: {
     name: "YURI KUKSA",
     title: "English Teacher",
+    pdfFileName: "Yuri_Kuksa_ESL_teacher",
     summary:
       "Experienced ESL teacher with a proven track record of working in Ukrainian public schools, English training centers in Ukraine and the Republic of China, and as an ESL teacher in the Netherlands (ISK school / EOA). Adept at creating engaging and effective lesson plans tailored to diverse learning styles and cultural backgrounds.",
     location: "Sittard, Limburg, Netherlands",

@@ -1,8 +1,13 @@
+//
+// ==================================================================
+//          Resume.jsx підключення напряму до ResumeData.js
+// ==================================================================
+//
+//
+
 import { useEffect } from "react";
 import { resumeData } from "../../data/Resume/resumeData";
 import avatar from "../../assets/img/forMobil.png";
-import { useResumeData } from "../../hooks/useResumeData";
-// // інші імпорти...
 
 import {
   GlobalStyle,
@@ -47,21 +52,7 @@ const buildPdfFileName = () => {
   return `${resumeData.personalInfo.pdfFileName}_${year}_${month}_${day}`;
 };
 
-// const Resume = ({ onBack }) => {
-//   const {
-//     personalInfo,
-//     areasOfExpertise,
-//     hardSkills,
-//     softSkills,
-//     languages,
-//     workExperience,
-//     education,
-//     resources,
-//   } = resumeData;
-
 const Resume = ({ onBack }) => {
-  const { data } = useResumeData();
-
   const {
     personalInfo,
     areasOfExpertise,
@@ -71,7 +62,7 @@ const Resume = ({ onBack }) => {
     workExperience,
     education,
     resources,
-  } = data;
+  } = resumeData;
 
   const handleBack = () => {
     if (onBack) {
@@ -83,8 +74,8 @@ const Resume = ({ onBack }) => {
 
   const handleSaveAsPdf = () => {
     const originalTitle = document.title;
-    // document.title = buildPdfFileName();
-    document.title = buildPdfFileName(personalInfo.pdfFileName);
+    document.title = buildPdfFileName();
+
     const restoreTitle = () => {
       document.title = originalTitle;
       window.removeEventListener("afterprint", restoreTitle);
@@ -177,18 +168,13 @@ const Resume = ({ onBack }) => {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get("print") === "true") {
       const timer = setTimeout(() => {
-        document.title = buildPdfFileName(); // вмик
+        document.title = buildPdfFileName();
         window.print();
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [personalInfo.pdfFileName]);
+  }, []);
 
-  // if (loading) {
-  //   return (
-  //     <div style={{ padding: 40, textAlign: "center" }}>Loading resume...</div>
-  //   );
-  // }
   return (
     <>
       <GlobalStyle />
@@ -211,7 +197,7 @@ const Resume = ({ onBack }) => {
               strokeLinejoin="round"
             />
           </svg>
-          <span>Turn Back</span>
+          <span>Back</span>
         </BackButton>
 
         <PrintButton type="button" onClick={handleSaveAsPdf}>
