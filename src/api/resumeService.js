@@ -15,7 +15,9 @@ export const fetchAllResumeData = async () => {
 
     // 1. Формуємо personalInfo
     const personalInfo = personalRows.reduce((acc, row) => {
-      if (["phone", "email", "whatsapp", "linkedin"].includes(row.key)) {
+      if (
+        ["phone", "email", "whatsapp", "linkedin", "website"].includes(row.key)
+      ) {
         acc.contacts = acc.contacts || {};
         acc.contacts[row.key] = row.value;
       } else {

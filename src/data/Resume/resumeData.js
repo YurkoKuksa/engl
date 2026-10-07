@@ -7,10 +7,11 @@ export const resumeData = {
       "Experienced ESL teacher with a proven track record of working in Ukrainian public schools, English training centers in Ukraine and the Republic of China, and as an ESL teacher in the Netherlands (ISK school / EOA). Adept at creating engaging and effective lesson plans tailored to diverse learning styles and cultural backgrounds.",
     location: "Sittard, Limburg, Netherlands",
     contacts: {
-      phone: "+31 61 631-91-15",
+      phone: "+ 31 61 631-91-15",
       email: "iurikuksa@gmail.com",
       whatsapp: "https://wa.me/31616319115",
       linkedin: "https://www.linkedin.com/in/yurii-kuksa/",
+      website: "https://yurkokuksa.github.io/engl",
     },
   },
 
