@@ -1,0 +1,64 @@
+.ewm{
+  --ewm-ocean:#e4edf2; --ewm-land:#c3d0d8; --ewm-edge:#f7fafb;
+  --ewm-p:#f2a413; --ewm-o:#1f9e8f;
+  --ewm-ink:#14293a; --ewm-mute:#5a7081; --ewm-card:#fff; --ewm-shadow:rgba(12,32,48,.38);
+  background:var(--ewm-ocean); color:var(--ewm-ink);
+  padding:20px 24px 24px; box-sizing:border-box; width:100%;
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.ewm *{box-sizing:border-box}
+@media (prefers-color-scheme:dark){
+  .ewm{--ewm-ocean:#0d2231; --ewm-land:#1f3b4e; --ewm-edge:#0d2231; --ewm-p:#ffb731; --ewm-o:#35c4b3;
+       --ewm-ink:#eaf2f6; --ewm-mute:#8da4b4; --ewm-card:#16384d; --ewm-shadow:rgba(0,0,0,.6)}
+}
+.ewm-back{display:grid;margin-bottom:10px}
+.ewm-head{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:flex-end;justify-content:space-between;margin-bottom:0}
+.ewm-title{margin:0;font-size:clamp(20px,5.4vw,44px);line-height:1.05;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.ewm-legend{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ewm-mute)}
+.ewm-legend div{display:flex;align-items:center;gap:10px}
+.ewm-legend b{color:var(--ewm-ink);font-weight:600}
+.ewm-sw{width:18px;height:18px;border-radius:5px;flex:none}
+.ewm-sw.p{background:var(--ewm-p)} .ewm-sw.o{background:var(--ewm-o)}
+
+.ewm-box{position:relative;width:100%}
+.ewm-box svg{display:block;width:100%;height:auto;overflow:visible}
+.ewm-c{fill:var(--ewm-land);stroke:var(--ewm-edge);stroke-width:.5;vector-effect:non-scaling-stroke}
+.ewm-c.t2{fill:var(--ewm-p)} .ewm-c.t1{fill:var(--ewm-o)}
+.ewm-c.t1,.ewm-c.t2{cursor:pointer;outline:none}
+
+/* країна, що піднімається при hover (малюється поверх усіх) */
+.ewm-lift{pointer-events:none}
+.ewm-lift path{
+  stroke:var(--ewm-edge);stroke-width:1;vector-effect:non-scaling-stroke;
+  transform-box:fill-box;transform-origin:center;
+  animation:ewm-lift .28s cubic-bezier(.2,.9,.3,1.2) forwards;
+}
+.ewm-lift .t2{fill:var(--ewm-p)} .ewm-lift .t1{fill:var(--ewm-o)}
+@keyframes ewm-lift{
+  from{transform:scale(1);filter:drop-shadow(0 0 0 transparent)}
+  to{transform:scale(var(--s));
+     filter:drop-shadow(0 4px 5px var(--ewm-shadow)) drop-shadow(0 12px 16px var(--ewm-shadow))}
+}
+
+/* підказка з назвою країни */
+.ewm-tip{
+  position:fixed;left:0;top:0;z-index:50;pointer-events:none;opacity:0;transition:opacity .15s;
+  background:var(--ewm-card);color:var(--ewm-ink);padding:10px 14px 11px;border-radius:12px;white-space:nowrap;
+  box-shadow:0 10px 30px var(--ewm-shadow),0 2px 6px var(--ewm-shadow);
+}
+.ewm-tip.on{opacity:1}
+.ewm-tip strong{display:block;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.ewm-tip span{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ewm-mute);margin-top:3px}
+.ewm-tip i{width:9px;height:9px;border-radius:50%}
+.ewm-tip i.p{background:var(--ewm-p)} .ewm-tip i.o{background:var(--ewm-o)}
+
+.ewm-note{margin:14px 0 0;font-size:13px;color:var(--ewm-mute);max-width:70ch;line-height:1.5}
+@media (prefers-reduced-motion:reduce){.ewm-lift path{animation-duration:.01s}.ewm-tip{transition:none}}
+@media (max-width:600px){
+  .ewm{padding:16px 12px 20px}
+  .ewm-title{padding-right:56px} /* room for the site's burger menu */
+  .ewm-legend{width:100%}
+  /* bigger map on phones: scroll it sideways (delete this rule to keep the whole map in view) */
+  .ewm-box{overflow-x:auto;padding:10px 0;-webkit-overflow-scrolling:touch}
+  .ewm-box svg{min-width:720px}
+}

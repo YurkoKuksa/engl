@@ -1,0 +1,81 @@
+/* ───────── Палітра (колірний паспорт EdTech_Platform) ───────── */
+.ewm{
+  --ewm-bg:#F4F8F9;          /* фон сторінки */
+  --ewm-land:#D0E0E3;        /* інші країни — м'ятний */
+  --ewm-edge:#F4F8F9;        /* лінії між країнами */
+  --ewm-p:#013f4a;           /* англійська — основна мова (найтемніший бренд) */
+  --ewm-o:#45818E;           /* англійська — офіційна (океанічний) */
+  --ewm-title:#013f4a;       /* H1 */
+  --ewm-ink:#0F2A30;         /* основний текст */
+  --ewm-mute:#45818E;        /* підписи */
+  --ewm-card:#FFFFFF;
+  --ewm-line:#E2ECEE;        /* бордери */
+  --ewm-badge-bg:#D0E0E3;
+  --ewm-badge-ink:#134F5C;
+  --ewm-shadow:rgba(1,63,74,.30);   /* колірна тінь для підйому країни */
+  --ewm-gutter:clamp(16px,3.2vw,52px); /* бокові відступи тексту; карта йде на всю ширину */
+
+  background:var(--ewm-bg);color:var(--ewm-ink);
+  padding:20px 0 28px;width:100%;box-sizing:border-box;
+  font-family:inherit;
+}
+.ewm *{box-sizing:border-box}
+
+/* ───────── Шапка: кнопка, заголовок, легенда ───────── */
+.ewm-back,.ewm-head,.ewm-note{padding-inline:var(--ewm-gutter)}
+.ewm-back{display:grid;margin-bottom:14px}
+.ewm-head{display:flex;flex-wrap:wrap;gap:12px 40px;align-items:flex-end;justify-content:space-between}
+.ewm-title{margin:0;font-size:clamp(20px,5.4vw,44px);line-height:1.05;font-weight:800;letter-spacing:-.02em;white-space:nowrap;color:var(--ewm-title)}
+.ewm-legend{display:flex;flex-direction:column;gap:7px;font-size:14px;line-height:1.3;color:var(--ewm-mute)}
+.ewm-legend div{display:flex;align-items:center;gap:10px}
+.ewm-legend b{color:var(--ewm-title);font-weight:600}
+.ewm-sw{width:14px;height:14px;border-radius:4px;flex:none}
+.ewm-sw.p{background:var(--ewm-p)} .ewm-sw.o{background:var(--ewm-o)}
+
+/* ───────── Карта ───────── */
+.ewm-box{position:relative;width:100%}
+.ewm-box svg{display:block;width:100%;height:auto;overflow:visible}
+.ewm-c{fill:var(--ewm-land);stroke:var(--ewm-edge);stroke-width:.5;vector-effect:non-scaling-stroke}
+.ewm-c.t2{fill:var(--ewm-p)} .ewm-c.t1{fill:var(--ewm-o)}
+.ewm-c.t1,.ewm-c.t2{cursor:pointer;outline:none}
+
+/* країна, що піднімається при hover (малюється поверх усіх) */
+.ewm-lift{pointer-events:none}
+.ewm-lift path{
+  stroke:var(--ewm-edge);stroke-width:1;vector-effect:non-scaling-stroke;
+  transform-box:fill-box;transform-origin:center;
+  animation:ewm-lift .28s cubic-bezier(.2,.9,.3,1.2) forwards;
+}
+.ewm-lift .t2{fill:var(--ewm-p)} .ewm-lift .t1{fill:var(--ewm-o)}
+@keyframes ewm-lift{
+  from{transform:scale(1);filter:drop-shadow(0 0 0 transparent)}
+  to{transform:scale(var(--s));
+     filter:drop-shadow(0 4px 5px var(--ewm-shadow)) drop-shadow(0 12px 16px var(--ewm-shadow))}
+}
+
+/* ───────── Підказка з назвою країни ───────── */
+.ewm-tip{
+  position:fixed;left:0;top:0;z-index:50;pointer-events:none;opacity:0;transition:opacity .15s;
+  background:var(--ewm-card);color:var(--ewm-title);padding:10px 12px 12px 14px;border-radius:12px;white-space:nowrap;
+  border:1px solid var(--ewm-line);
+  box-shadow:0 10px 30px rgba(1,63,74,.16),0 2px 6px rgba(1,63,74,.08);
+}
+.ewm-tip.on{opacity:1}
+.ewm-tip strong{display:block;font-size:18px;font-weight:800;letter-spacing:-.01em}
+/* бейдж зі статусом — за паспортом: м'ятний фон + #134F5C */
+.ewm-tip span{display:inline-flex;align-items:center;gap:6px;margin-top:7px;padding:3px 9px 3px 8px;border-radius:999px;
+  background:var(--ewm-badge-bg);color:var(--ewm-badge-ink);font-size:12px;font-weight:600}
+.ewm-tip i{width:8px;height:8px;border-radius:50%}
+.ewm-tip i.p{background:var(--ewm-p)} .ewm-tip i.o{background:var(--ewm-o)}
+
+.ewm-note{margin:16px 0 0;font-size:13px;color:var(--ewm-mute);max-width:calc(70ch + var(--ewm-gutter) * 2);line-height:1.5}
+
+@media (prefers-reduced-motion:reduce){.ewm-lift path{animation-duration:.01s}.ewm-tip{transition:none}}
+@media (max-width:600px){
+  .ewm{padding:16px 0 20px}
+  .ewm-title{padding-right:56px} /* місце під бургер-меню сайту */
+  .ewm-legend{width:100%}
+  /* більша карта на телефоні: гортається вбік (видаліть правило, щоб бачити весь світ одразу) */
+  .ewm-box{overflow-x:auto;padding:10px 0;-webkit-overflow-scrolling:touch}
+  .ewm-box svg{min-width:720px}
+}

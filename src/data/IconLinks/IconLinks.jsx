@@ -1,6 +1,6 @@
 import kahoot from "../../assets/svg/kahoot.svg";
 import youtube from "../../assets/svg/youtube1.svg";
-import telegram from "../../assets/svg/telegram.svg";
+// import telegram from "../../assets/svg/telegram.svg";
 import linkedIn from "../../assets/svg/linkedin.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
 import mail from "../../assets/svg/gmail.svg";
@@ -46,12 +46,12 @@ const IconLinksSet = [
     img: whatsapp,
     ImgComponent: SvgItm,
   },
-  {
-    href: "https://t.me/esl_tutoring",
-    alt: "telegram",
-    img: telegram,
-    ImgComponent: SvgItm,
-  },
+  // {
+  //   href: "https://t.me/esl_tutoring",
+  //   alt: "telegram",
+  //   img: telegram,
+  //   ImgComponent: SvgItm,
+  // },
   {
     href: "mailto:iurikuksa@gmail.com",
     alt: "mail",

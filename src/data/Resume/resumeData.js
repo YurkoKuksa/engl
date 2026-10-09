@@ -70,7 +70,7 @@ export const resumeData = {
     {
       id: 1,
       role: "ESL Teacher",
-      period: "Oct 2022 – July 2023",
+      period: "Oct 2022 – Aug 2023",
       company: "LVO | Netherlands",
       details: [
         { text: "EOA foreign classes at ", school: "DaCapo College" },
@@ -83,7 +83,7 @@ export const resumeData = {
     {
       id: 2,
       role: "ESL Teacher",
-      period: "May 2022 – July 2022",
+      period: "May 2022 – Aug 2022",
       company: "LVO | Netherlands",
       details: [{ text: "ISK Ukrainian class at ", school: "SintJan College" }],
       achievements: [

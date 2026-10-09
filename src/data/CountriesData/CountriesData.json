@@ -1,0 +1,455 @@
+[
+  {
+    "id": 1,
+    "slug": "united-states",
+    "country_name": "United States",
+    "capital": "Washington, D.C.",
+    "flag_image": "/img/CountryFlag/UnitedStates.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 78.1,
+    "dialect_features": "American English is characterized by rhoticity, distinct vowel shifts (such as the Northern Cities Shift and Southern Drawl), and specific vocabulary variations across regions like the Northeast, South, and Midwest.",
+    "unique_vocabulary": [
+      "trashcan",
+      "sidewalk",
+      "faucet",
+      "sneakers",
+      "elevator"
+    ],
+    "phonetic_features": [
+      "Flap T / Glottal tap [ɾ] in 'water' and 'butter'",
+      "Glottal Stop [ʔ] / Stop T in 'curtain' and 'mountain'",
+      "Rhoticity / Hard R [ɹ] in 'car', 'bird', and 'park'",
+      "Father-Bother merger (/ɑ/ and /ɒ/) making 'father' and 'bother' rhyme"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "canada",
+    "country_name": "Canada",
+    "capital": "Ottawa",
+    "flag_image": "/img/CountryFlag/Canada.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 56.0,
+    "dialect_features": "Canadian English combines elements of American and British English. Key features include 'Canadian raising' (distinct diphthong pronunciation before voiceless consonants) and the iconic sentence-final particle 'eh'.",
+    "unique_vocabulary": [
+      "toque",
+      "loonie",
+      "chesterfield",
+      "double-double",
+      "poutine"
+    ],
+    "phonetic_features": [
+      "Canadian Raising of /aɪ/ in 'about' [əˈbaʊt → əˈbʌʊt] and 'house'",
+      "Cot-Caught merger pronouncing 'cot' and 'caught' identically",
+      "Flap T [ɾ] similar to American English in 'writer' and 'metal'"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "united-kingdom",
+    "country_name": "United Kingdom",
+    "capital": "London",
+    "flag_image": "/img/CountryFlag/UnitedKingdom.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 92.0,
+    "dialect_features": "British English features diverse regional accents (e.g., Received Pronunciation, Cockney, Scouse, Geordie, Scottish, Welsh English). It is predominantly non-rhotic and preserves classical spelling and terminology.",
+    "unique_vocabulary": [
+      "boot (car trunk)",
+      "bonnet",
+      "loo",
+      "chips (fries)",
+      "flat (apartment)"
+    ],
+    "phonetic_features": [
+      "Non-rhoticity (silent post-vocalic R) in 'car' [kɑː] and 'water' [ˈwɔːtə]",
+      "Glottal T-stopping [ʔ] in Cockney/Estuary 'bottle' [ˈbɒʔl̩]",
+      "Broad A [ɑː] in words like 'bath', 'path', and 'grass'"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "guyana",
+    "country_name": "Guyana",
+    "capital": "Georgetown",
+    "flag_image": "/img/CountryFlag/Guyana.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 60.0,
+    "dialect_features": "Guyanese English is heavily influenced by Guyanese Creole (Creolese). Phonetics reflect Caribbean cadence with unique grammatical structures and loanwords from African and Indian languages.",
+    "unique_vocabulary": [
+      "liming (hanging out)",
+      "skettel",
+      "cook-up",
+      "babba",
+      "baigan"
+    ],
+    "phonetic_features": [
+      "Th-stopping replacing /θ/ and /ð/ with [t] and [d] in 'thing' [tɪŋ] and 'them' [dem]",
+      "Vowel monophthongization in 'make' [mek] and 'go' [go]",
+      "Syllable-timed cadence with reduced consonant clusters at the end of words"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "australia",
+    "country_name": "Australia",
+    "capital": "Canberra",
+    "flag_image": "/img/CountryFlag/Australia.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 72.0,
+    "dialect_features": "Australian English is famous for extensive use of diminutives and abbreviations ending in '-o' or '-ie', non-rhoticity, flat vowels, and vocabulary influenced by Indigenous Australian languages.",
+    "unique_vocabulary": [
+      "arvo (afternoon)",
+      "thongs (flip-flops)",
+      "reggo",
+      "biscuit",
+      "bludger"
+    ],
+    "phonetic_features": [
+      "High Rising Intonation (HRI) / Uptalk at the end of declarative sentences",
+      "Non-rhoticity dropped 'R' in 'hard' [hɑːd] and 'teacher' [ˈtiːtʃə]",
+      "Vowel shift where /iː/ becomes diphthongized [əi] in 'happy' or 'see'"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "new-zealand",
+    "country_name": "New Zealand",
+    "capital": "Wellington",
+    "flag_image": "/img/CountryFlag/NewZealand.jpg",
+    "english_status": "Primary Language",
+    "native_speaker_percentage": 95.4,
+    "dialect_features": "New Zealand English (NZ English) features distinct vowel shifts (e.g., short 'i' sounds like 'u') and incorporates extensive Māori vocabulary (e.g., 'kia ora', 'whānau').",
+    "unique_vocabulary": [
+      "jandals",
+      "chilly bin",
+      "sweet as",
+      "dairy (corner shop)",
+      "bach"
+    ],
+    "phonetic_features": [
+      "Centralized short 'i' /ɪ/ sounding like schwa [ə] in 'fish and chips' [fəʃ ən tʃəps]",
+      "Fronted open vowel /ɛ/ sounding like /ɪ/ in 'pen' [pɪn] (pen-pin merger)",
+      "Non-rhotic pronunciation similar to Australian English"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "india",
+    "country_name": "India",
+    "capital": "New Delhi",
+    "flag_image": "/img/CountryFlag/India.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.02,
+    "dialect_features": "Indian English utilizes retroflex consonants, syllable-timed rhythm, unique grammatical forms like continuous tenses with stative verbs, and local idioms directly translated from native languages.",
+    "unique_vocabulary": [
+      "prepone",
+      "lakh",
+      "crore",
+      "cousin-brother",
+      "out of station"
+    ],
+    "phonetic_features": [
+      "Retroflex plosives [ʈ] and [ɖ] replacing alveolar /t/ and /d/ in 'time' and 'do'",
+      "Substitution of fricatives /v/ and /w/ with a labiodental approximant [ʋ]",
+      "Syllable-timed rhythm where each syllable receives equal duration and stress"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "philippines",
+    "country_name": "Philippines",
+    "capital": "Manila",
+    "flag_image": "/img/CountryFlag/Philippines.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "Philippine English is largely modeled after American English but features distinct phonological adaptations, code-switching with Tagalog (Taglish), and unique local vocabulary items.",
+    "unique_vocabulary": [
+      "comfort room (CR)",
+      "soli",
+      "high blood",
+      "gimmick",
+      "chancing"
+    ],
+    "phonetic_features": [
+      "Substitution of fricatives /f/ and /v/ with stops [p] and [b] in 'family' [pæmili]",
+      "Merging of short vowels /ɪ/ and /iː/ (making 'fill' and 'feel' sound identical)",
+      "Unreleased final stops /p, t, k/ in rapid conversation"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "papua-new-guinea",
+    "country_name": "Papua New Guinea",
+    "capital": "Port Moresby",
+    "flag_image": "/img/CountryFlag/PapuaNewGuinea.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 1.0,
+    "dialect_features": "English in PNG is widely influenced by Tok Pisin (an English-based creole). Standard English is used in formal sectors with simplified phonological contrasts.",
+    "unique_vocabulary": ["wantok", "bilum", "sing-sing", "tok", "kumu"],
+    "phonetic_features": [
+      "Vowel inventory reduction (5-vowel system: a, e, i, o, u)",
+      "Simplification of final consonant clusters (e.g., 'hand' spoken as 'han')",
+      "Interchanging of dental fricatives /θ/ and /ð/ with dental stops [t] and [d]"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "nigeria",
+    "country_name": "Nigeria",
+    "capital": "Abuja",
+    "flag_image": "/img/CountryFlag/Nigeria.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.5,
+    "dialect_features": "Nigerian English incorporates tonal influences from indigenous languages like Yoruba, Igbo, and Hausa. Nigerian Pidgin English is also widely spoken informally throughout the country.",
+    "unique_vocabulary": [
+      "k-leg",
+      "go-slow (traffic jam)",
+      "oGA",
+      "now now",
+      "chop"
+    ],
+    "phonetic_features": [
+      "Tonal intonation patterns mapped onto English stress-accent systems",
+      "Loss of vowel length distinction (making 'ship' and 'sheep' homophones [ʃip])",
+      "Replacement of dental fricatives /θ/ and /ð/ with alveolar stops [t] and [d]"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "ghana",
+    "country_name": "Ghana",
+    "capital": "Accra",
+    "flag_image": "/img/CountryFlag/Ghana.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.2,
+    "dialect_features": "Ghanaian English features syllable-timed intonation, unique idioms reflecting Akan and other local cultural concepts, and reduced vowel distinctions.",
+    "unique_vocabulary": [
+      "trotro",
+      "chale",
+      "chewing (studying hard)",
+      "flash (phone call)",
+      "dash"
+    ],
+    "phonetic_features": [
+      "Syllable-timed stress giving equal weight to unstressed syllables",
+      "Monophthongization of diphthongs /eɪ/ and /oʊ/ to pure vowels [e] and [o] in 'gate' and 'go'",
+      "Pronunciation of 'ch' /tʃ/ with a soft fricative quality [ʃ]"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "liberia",
+    "country_name": "Liberia",
+    "capital": "Monrovia",
+    "flag_image": "/img/CountryFlag/Liberia.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 2.5,
+    "dialect_features": "Liberian English is uniquely connected to 19th-century African American Vernacular English (AAVE) alongside local Liberian Kreyol grammar and phonetic influences.",
+    "unique_vocabulary": ["plenty", "small-small", "snap", "flesh", "pappy"],
+    "phonetic_features": [
+      "Deletion of final consonants in words like 'first' [fəs] and 'hand' [han]",
+      "Vowel nasalization before nasal consonants",
+      "Replacing initial dental fricatives /ð/ with voiced alveolar stops [d]"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "cameroon",
+    "country_name": "Cameroon",
+    "capital": "Yaoundé",
+    "flag_image": "/img/CountryFlag/Cameroon.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 1.0,
+    "dialect_features": "Cameroonian English coexists with French and Cameroonian Pidgin English, leading to heavy borrowing, non-rhotic pronunciation, and unique syntactic structures.",
+    "unique_vocabulary": [
+      "bend-skin",
+      "whiteman",
+      "chop-chair",
+      "camfranglais",
+      "sufferer"
+    ],
+    "phonetic_features": [
+      "French-influenced stress placement shifts toward the final syllable",
+      "Neutralization of central vowels /ɜː/ and /ə/ to open front or back vowels",
+      "Consonant simplification at word endings"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "sudan",
+    "country_name": "Sudan",
+    "capital": "Khartoum",
+    "flag_image": "/img/CountryFlag/Sudan.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "Sudanese English shows strong phonological influence from Arabic (such as substituting 'p' for 'b') and simplified consonant cluster structures.",
+    "unique_vocabulary": ["raksha", "khawaja", "haboob", "agora", "zande"],
+    "phonetic_features": [
+      "Substitution of voiceless bilabial plosive /p/ with voiced /b/ ('paper' → 'baber')",
+      "Epenthetic vowel insertion to break consonant clusters ('stop' → 'istop')",
+      "Trilled alveolar 'r' [r] influenced by Arabic phonology"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "south-sudan",
+    "country_name": "South Sudan",
+    "capital": "Juba",
+    "flag_image": "/img/CountryFlag/SouthSudan.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "English in South Sudan serves as an official bridging language and shows heavy phonetic influences from East African English and regional Nilo-Saharan languages.",
+    "unique_vocabulary": ["boda-boda", "shabab", "mzee", "cows", "tuk-tuk"],
+    "phonetic_features": [
+      "Voiceless dental plosives replacing 'th' sounds [θ] → [t]",
+      "Vowel length mergers making 'full' and 'fool' sound identical",
+      "Heavy aspiration on word-initial voiceless stops"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "uganda",
+    "country_name": "Uganda",
+    "capital": "Kampala",
+    "flag_image": "/img/CountryFlag/Uganda.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.2,
+    "dialect_features": "Ugandan English ('Uglish') features distinct stress patterns, literal translations from local languages like Luganda, and specific localized colloquialisms.",
+    "unique_vocabulary": [
+      "extend (make room)",
+      "rolex (rolled egg snack)",
+      "matatu",
+      "mzungu",
+      "detoother"
+    ],
+    "phonetic_features": [
+      "L/R liquid substitution (interchanging /l/ and /r/ in 'rice' and 'lice')",
+      "Stress assignment shift to the first syllable regardless of standard rules",
+      "Vowel fronting where /ɔː/ sounds like [a] or [o]"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "kenya",
+    "country_name": "Kenya",
+    "capital": "Nairobi",
+    "flag_image": "/img/CountryFlag/Kenya.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "Kenyan English exhibits syllable-timed rhythm, vowel reduction shifts influenced by Swahili, and frequent code-mixing known as Sheng in urban settings.",
+    "unique_vocabulary": ["matatu", "harambee", "ugali", "shamba", "suffuria"],
+    "phonetic_features": [
+      "Pure 5-vowel system alignment replacing complex English dipthongs",
+      "Lack of schwa sound [ə] replaced by explicit full cardinal vowels",
+      "Hard alveolar /t/ replacing dental fricative /θ/ ('think' pronounced as 'tink')"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "tanzania",
+    "country_name": "Tanzania",
+    "capital": "Dodoma",
+    "flag_image": "/img/CountryFlag/Tanzania.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "Tanzanian English is heavily influenced by Swahili phonology, featuring simplified vowel systems and clear syllable-by-syllable pronunciation.",
+    "unique_vocabulary": ["daladala", "boma", "askari", "posho", "mzee"],
+    "phonetic_features": [
+      "Syllable-timed rhythm matching Swahili structure",
+      "Absence of syllabic consonants ('little' pronounced with explicit vowel [litel])",
+      "Non-rhotic terminal 'r' replaced by open vowel ending"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "malawi",
+    "country_name": "Malawi",
+    "capital": "Lilongwe",
+    "flag_image": "/img/CountryFlag/Malawi.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 0.1,
+    "dialect_features": "Malawian English reflects Chichewa phonological rules, with non-rhotic pronunciation, altered vowel lengths, and formal vocabulary derived from British rule.",
+    "unique_vocabulary": ["chitenje", "nsima", "kabaza", "ganyu", "dambo"],
+    "phonetic_features": [
+      "Voiced bilabial fricative [β] substitution for /v/",
+      "Merging of short and long vowels (/ɪ/ and /iː/ sounds)",
+      "Dental stop substitutions for 'th' fricatives"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "zambia",
+    "country_name": "Zambia",
+    "capital": "Lusaka",
+    "flag_image": "/img/CountryFlag/Zambia.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 1.8,
+    "dialect_features": "Zambian English displays simplified consonant clusters, pitch intonation influenced by Bemba and Nyanja, and unique localized expressions.",
+    "unique_vocabulary": ["nshima", "chitenge", "zamcab", "boza", "pantloons"],
+    "phonetic_features": [
+      "Simplification of final consonant blends ('test' -> 'tes')",
+      "Pitch-accent tone transference onto English vocabulary",
+      "Monophthongization of diphthongs /aɪ/ and /aʊ/"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "zimbabwe",
+    "country_name": "Zimbabwe",
+    "capital": "Harare",
+    "flag_image": "/img/CountryFlag/Zimbabwe.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 2.0,
+    "dialect_features": "Zimbabwean English retains traditional British English grammar alongside distinct Bantu phonetic influences (Shona/Ndebele) and localized idiomatic expressions.",
+    "unique_vocabulary": [
+      "muddler",
+      "combis",
+      "sadza",
+      "robot (traffic light)",
+      "braai"
+    ],
+    "phonetic_features": [
+      "Non-rhotic British-style vocalic 'r' dropped at line endings",
+      "Bantu-influenced vowel shifts (/æ/ sounding closer to [e])",
+      "Clear articulation of voiceless plosives without heavy aspiration"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "namibia",
+    "country_name": "Namibia",
+    "capital": "Windhoek",
+    "flag_image": "/img/CountryFlag/Namibia.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 3.4,
+    "dialect_features": "Namibian English reflects grammatical and vocabulary influence from Afrikaans and German alongside indigenous languages like Oshiwambo.",
+    "unique_vocabulary": ["bakkie", "braai", "kapana", "lekker", "robot"],
+    "phonetic_features": [
+      "Guttural and trilled consonants influenced by Afrikaans/German",
+      "Vowel rounding changes in central vowels",
+      "Stiffened alveolar plosives [t] and [d]"
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "south-africa",
+    "country_name": "South Africa",
+    "capital": "Pretoria",
+    "flag_image": "/img/CountryFlag/SouthAfrica.jpg",
+    "english_status": "Official Language",
+    "native_speaker_percentage": 9.6,
+    "dialect_features": "South African English includes unique slang (e.g., 'braai', 'howzit'), non-rhotic pronunciation, and pitch variations influenced by Afrikaans, Zulu, and Xhosa.",
+    "unique_vocabulary": [
+      "braai",
+      "howzit",
+      "bakkie",
+      "robot (traffic light)",
+      "tackies"
+    ],
+    "phonetic_features": [
+      "Kit-split phoneme: short 'i' /ɪ/ pronounced as [ɪ] in 'kit' but [ə] in 'bit'",
+      "Glottalized unvoiced plosives [pʰ, tʰ, kʰ] in formal register",
+      "Non-rhotic accent dropping 'r' after vowels ('car' [kɑː])"
+    ]
+  }
+]

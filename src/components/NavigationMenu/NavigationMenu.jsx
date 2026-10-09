@@ -11,9 +11,12 @@ const NavigationMenu = ({ onNavigate }) => {
   const navItems = [
     { path: "/", label: "Main" },
     { path: "/publications", label: "Publications" },
+    { path: "/map", label: "Anglosphere Map" },
+
     { path: "/resume", label: "Resume" },
     // { path: "/sources", label: "Sources" },
     // { path: "/c3", label: "Certification" },
+
     { path: "/contacts", label: "Contacts" },
     // youtube videos
     // resume
