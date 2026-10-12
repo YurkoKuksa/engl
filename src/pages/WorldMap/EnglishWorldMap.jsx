@@ -1,6 +1,8 @@
 import { useState, useRef, useCallback, memo } from "react";
+import { useNavigate } from "react-router-dom"; // 1. Імпортуємо навігацію
 import countries from "../../data/WorldMap/countries.json"; // [{ n: name, d: svgPath, t: 0|1|2, s: hoverScale }]
-import "./EnglishWorldMap.css";
+// import "./EnglishWorldMap.css";
+import "./EnglishWorldMap.Сolored.css";
 
 import { BackBtn } from "../../components/BackBtn/BackBtn.jsx";
 
@@ -10,7 +12,12 @@ const TIER = {
   1: { cls: "o", label: "Official / widely used" },
 };
 
-const Countries = memo(function Countries({ onEnter, onLeave }) {
+// Додали onClickCountry у пропси компонента Countries
+const Countries = memo(function Countries({
+  onEnter,
+  onLeave,
+  onClickCountry,
+}) {
   return (
     <g>
       {countries.map((c, i) =>
@@ -30,6 +37,7 @@ const Countries = memo(function Countries({ onEnter, onLeave }) {
               onEnter(c, r.left + r.width / 2, r.top + r.height / 2);
             }}
             onBlur={() => onLeave()}
+            onClick={() => onClickCountry(c)}
           />
         ),
       )}
@@ -40,6 +48,7 @@ const Countries = memo(function Countries({ onEnter, onLeave }) {
 export default function EnglishWorldMap({ onBack }) {
   const [hover, setHover] = useState(null);
   const tip = useRef(null);
+  const navigate = useNavigate(); // 3. Ініціалізуємо хук навігації
 
   const move = useCallback((x, y) => {
     const el = tip.current;
@@ -67,8 +76,21 @@ export default function EnglishWorldMap({ onBack }) {
   }, []);
 
   const onBoxPointerDown = (e) => {
-    if (!e.target.classList.contains("t1") && !e.target.classList.contains("t2")) {
+    if (
+      !e.target.classList.contains("t1") &&
+      !e.target.classList.contains("t2")
+    ) {
       setHover(null);
+    }
+  };
+
+  // Функція формування слага з назви країни та переходу
+  const handleCountryClick = (country) => {
+    if (country && country.n) {
+      // Конвертуємо назву з мапи (наприклад, "South Africa" -> "south-africa")
+      const slug =
+        country.slug || country.n.toLowerCase().trim().replace(/\s+/g, "-");
+      navigate(`/map/${slug}`);
     }
   };
 
@@ -108,7 +130,11 @@ export default function EnglishWorldMap({ onBack }) {
           role="img"
           aria-label="World map highlighting countries where English is an official or primary language"
         >
-          <Countries onEnter={onEnter} onLeave={onLeave} />
+          <Countries
+            onEnter={onEnter}
+            onLeave={onLeave}
+            onClickCountry={handleCountryClick}
+          />
           {hover && (
             <g className="ewm-lift" key={hover.n} style={{ "--s": hover.s }}>
               <path className={`t${hover.t}`} d={hover.d} />

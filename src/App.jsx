@@ -12,6 +12,7 @@ import NotFound from "./pages/DefaultPages/NotFoundPage/NotFound1";
 import Resume from "./pages/Resume/Resume";
 import Terms from "./pages/Terms/Terms";
 import Map from "./pages/WorldMap/EnglishWorldMap";
+import Country from "./pages/WorldMap/Country/Country";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
           <Route path="resume" element={<Resume />} />
           <Route path="map" element={<Map />} />
+          <Route path="map/:slug" element={<Country />} />
           <Route path="c3" element={<UnderConstruction />} />
           <Route path="c4" element={<UnderConstruction />} />
         </Route>
